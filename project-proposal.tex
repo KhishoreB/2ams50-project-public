@@ -1,0 +1,160 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{booktabs}
+
+\title{2AMS50 Optimization for Data Science\\[4pt]Project Proposal: Public Transport Line Planning}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent Group of 5 \quad$\cdot$\quad Report deadline: October 19 \quad$\cdot$\quad Defenses: weeks 7--8
+
+\section{Dataset}
+
+We will work with the \emph{LinTim} benchmark suite for public transport optimization (available at \texttt{https://lintim.net}, data and source code at \texttt{https://gitlab.com/lintim/openlintim}). Each instance describes a public transport network through simple semicolon-separated data files:
+
+\begin{itemize}
+  \item a set of \emph{stops} (bus stops, tram or train stations), each with coordinates for visualization;
+  \item a \emph{track network}: edges between stops, each with a travel time and a lower and an upper bound on the vehicle frequency (the minimum and maximum number of vehicles that may run over that track per period);
+  \item an \emph{origin--destination matrix}: for every pair of stops, how many passengers want to travel between them within one period;
+  \item a \emph{vehicle capacity}: the maximum number of passengers per vehicle.
+\end{itemize}
+
+Concretely, each ingredient is stored in one data file. The table below maps the four concepts above to the files and shows one real example row from the Mandl instance (all datasets follow the same format):
+
+\begin{center}
+\begin{tabular}{llp{9.2cm}}
+\toprule
+Concept & File & Header and example row \\
+\midrule
+Stops & \texttt{Stop.giv} &
+  \texttt{\# stop-id; short-name; long-name; x-coord; y-coord}\\
+ & & \texttt{1; 1; Eins; 1; 9} \quad (stop 1, named ``Eins'', at $(1,9)$) \\
+Track network & \texttt{Edge.giv} &
+  \texttt{\# edge-id; left-stop; right-stop; length; lower; upper}\\
+ & & \texttt{1; 1; 2; 5.33; 8; 8} \quad (edge 1 joins stops 1 and 2, length 5.33; both bounds equal 8) \\
+OD matrix & \texttt{OD.giv} &
+  \texttt{\# left-stop-id; right-stop-id; customers}\\
+ & & \texttt{1; 2; 400} \quad (400 passengers per period from stop 1 to stop 2) \\
+Vehicle capacity & \texttt{Config.cnf} &
+  \texttt{gen\_passengers\_per\_vehicle; 450} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent In \texttt{Edge.giv}, the last two columns are lower and upper frequency bounds for that track. On every Mandl edge the two values coincide ($8 = 8$ above), because here they record the frequency the demand requires rather than an independent capacity limit; the upper column acts as a genuine capacity ceiling only when it exceeds the lower bound. Travel times follow from the edge length and the vehicle speed (\texttt{gen\_vehicle\_speed; 40} km/h for Mandl), both read from the same \texttt{Config.cnf} that also fixes the vehicle capacity (450 for Mandl, 10000 for the Lower Saxony rail network). A full instance is therefore a folder with these files plus the configuration, which our parser reads directly.
+
+A \emph{line} is a sequence of stops served by vehicles running back and forth along a route through this network. The \emph{line planning problem} consists of choosing which lines to operate and how often each one runs. Because the network itself is given, the difficulty lies entirely in selecting lines and frequencies that serve the demand well at low cost. The per-edge frequency bounds act as capacities: if many passengers need to cross a track, enough vehicles must be scheduled on lines using that track. The suite ranges from small toy networks to city-sized bus and rail networks. We plan to use the following instances, ordered by size:
+
+\begin{center}
+\begin{tabular}{lcccl}
+\toprule
+Instance & Stops & Edges & OD pairs & Role in the project \\
+\midrule
+toy & 8 & 8 & 46 & validation of formulations by hand \\
+Mandl & 15 & 21 & 172 & main benchmark, literature comparison \\
+Sioux Falls & 24 & 38 & 552 & main benchmark \\
+Athens metro & 51 & 52 & 2385 & scalability test \\
+G\"ottingen bus (optional) & 257 & 548 & 58226 & heuristics only \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Problem}
+
+The core problem is \emph{cost-optimal line planning}. Given a pool of candidate lines (routes through the network), we choose a subset and assign integer service frequencies to each, subject to three constraints: all origin--destination demand must be routable, the frequency of each edge must stay within its given bounds, and the vehicle capacity must cover the passenger load. The objective is to minimize total operating cost. Sch\"obel (2012) establishes this as the classical line planning problem; it is NP-hard and generalizes set covering.
+
+In symbols: let $\mathcal{L}$ be the pool of candidate lines, with cost $c_l$ and operating frequency $y_l$ for each $l \in \mathcal{L}$. Each edge $e$ carries frequency bounds $\underline{f}_e$ and $\overline{f}_e$, and each vehicle seats $\kappa$ passengers. A line concept is an integer vector $y \in \mathbb{Z}_{\ge 0}^{\mathcal{L}}$; the planning question is which vector serves all passengers at minimum cost $\sum_{l} c_l y_l$.
+
+\section{Formulations}
+
+We will develop two formulations and compare them, both with each other and with the literature.
+
+\subsection*{Model A: pool-based cost model}
+
+One integer variable $y_l$ per candidate line:
+
+\begin{align*}
+  \text{Minimize} \quad & \sum_{l \in \mathcal{L}} c_l y_l \\
+  \text{subject to} \quad & y_l \ge 1 \quad && \text{for chosen lines } l \text{ (support variables } x_l \in \{0,1\}), \\
+  & \underline{f}_e \le \sum_{l \ni e} y_l \le \overline{f}_e \quad && \forall e \text{ (frequency bounds per edge)}, \\
+  & \text{passenger loads on every edge} \le \kappa \cdot \text{(frequency of that edge)}, \\
+  & y_l \in \mathbb{Z}_{\ge 0}, \; x_l \in \{0,1\}.
+\end{align*}
+
+The load constraint requires routing the OD demand over the selected lines; the exact encoding of the routing is what distinguishes Model A from Model B below. Model A is compact, solvable exactly on small and medium instances, and close to the standard formulation in the literature.
+
+\subsection*{Model B: passenger-routing model}
+
+Model B adds flow variables per OD pair over the chosen lines, so the model routes passengers explicitly. It is larger than Model A, but it represents passenger behavior honestly: passengers are assigned to actual sequences of lines rather than counted through aggregate loads. This makes passenger-side objectives (travel time, number of transfers) natural extensions.
+
+Comparing the two models, and both against the formulations in the literature, addresses the report requirement to formulate the problem in ways that differ from the literature. The expected trade-off: Model A solves faster but relies on aggregate loads; Model B is more faithful but grows quickly with instance size.
+
+\section{Research questions}
+
+\subsection*{RQ1: Cost-optimal line concepts}
+
+What is the minimum-cost line concept, and can we compute it exactly on the benchmark instances? We answer this with the MIPs of Section 3 and report runtimes and optimality gaps.
+
+\subsection*{RQ2: The cost--service trade-off}
+
+Practical operators work under a fixed budget rather than at minimum cost. We therefore fix a budget, maximize the number of passengers served (or minimize a travel-time measure), and sweep the budget to obtain a Pareto frontier of cost against service quality. This question follows from the assignment description, which asks that all passengers receive reasonable travel times, not only those in dense areas.
+
+\subsection*{RQ3: Minimizing transfers}
+
+We then move the objective to the passenger side: choose lines so that the expected number of transfers is minimized, equivalently maximize the number of passengers who travel directly. This variant has a set-covering structure distinct from RQ1 and allows comparison with the column-generation results that LinTim publishes.
+
+\subsection*{RQ4: Exact versus heuristic methods}
+
+We solve the instances exactly where possible, with MIP and column generation, and heuristically otherwise (greedy frequency assignment and simulated annealing over subsets of the pool). We measure how close heuristics come to exact optima on small instances, and how they perform on the large instances where exact solving fails.
+
+\section{Ambition levels (for feedback)}
+
+\begin{itemize}
+  \item \textbf{Tier 1 (minimum viable).} RQ1, RQ2 and RQ4 on toy, Mandl and Sioux Falls.
+  \item \textbf{Tier 2 (our proposal).} Tier 1 plus RQ3 and the Athens instance. This requires a working column-generation implementation, which raises the ambition moderately.
+  \item \textbf{Tier 3 (stretch, only if Tier 2 finishes early).} Three options, in decreasing order of preference:
+    \begin{enumerate}
+      \item \emph{Robust line planning:} evaluate line concepts by expected passenger delay under synthetic delay scenarios; the dataset includes delay data and a delay generator.
+      \item \emph{Integrated line planning and timetabling:} one model over both line frequencies and timetable variables. This is research-level; we would scope it to toy and Mandl only.
+      \item \emph{Multimodal line planning on the Helsinki instance} (bus, tram, metro, rail, ferry).
+    \end{enumerate}
+\end{itemize}
+
+We assess Tier 2 as the appropriate level for five members over four weeks. The Tier 3 items are labeled as stretch and would be the first to cut.
+
+\section{Solution methods}
+
+Exact: MIP formulations solved with Gurobi (academic license), and column generation for Model B, where LP dual values price candidate lines and paths. Heuristics: greedy construction followed by local search or simulated annealing. As an external check, we will compare our solutions against reference solutions that LinTim provides or generates.
+
+\section{Evaluation and deliverables}
+
+We report, per instance: exact runtimes and optimality status, heuristic gaps relative to exact optima, Pareto curves of budget against service quality, transfer statistics, and visualizations of the resulting line concepts. The final report follows the prescribed structure: literature study, formulations, solution methods, results, and member contributions. Every member develops and runs at least one solution method, which we document in a logbook.
+
+\section{Timeline}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Week & Milestones \\
+\midrule
+1 (Sep 21--28) & data parsers, hand solution of the toy instance, Model A on Mandl, literature draft \\
+2 (Sep 29--Oct 5) & exact results on Mandl and Sioux Falls, Model B and RQ3 formulations, first heuristic, baselines \\
+3 (Oct 6--12) & column generation, budget sweep, Athens, final experiments \\
+4 (Oct 13--19) & writing and internal review, submission; defense preparation in weeks 7--8 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Questions for the lecturer}
+
+\begin{enumerate}
+  \item Is Tier 2 the right ambition level, or should we commit to one of the Tier 3 items instead?
+  \item Do our own pool-based formulations and implementations count as sufficient methodological contribution, or do you expect novelty in the formulation itself?
+  \item Are LinTim reference solutions an appropriate benchmark for our results section?
+\end{enumerate}
+
+\end{document}

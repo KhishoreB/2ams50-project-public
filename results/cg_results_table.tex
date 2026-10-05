@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Column generation: LP bound, integer plan from the generated lines, and the static-pool baseline MIP}
+  \label{tab:cg_results}
+  \begin{tabular}{lrrrrrrr}
+    \toprule
+    Dataset & Iter. & CG time (s) & LP bound & Integer plan & Gap (\%) & Baseline MIP & Saving (\%) \\
+    \midrule
+    Toy & 5 & 0.3 & 603.70 & 603.70 & 0.00 & 703.80 & 14.2 \\
+    Mandl & 22 & 0.5 & 981.71 & 981.79 & 0.01 & 1933.32 & 49.2 \\
+    Sioux Falls & 52 & 296.7 & 1318.93 & 1345.21 & 1.99 & 3893.72 & 65.5 \\
+    Grid & 48 & 609.3 & 512.15 & 513.80 & 0.32 & 812.15 & 36.7 \\
+    Athens & 51 & 3.4 & 1079.45 & 1079.71 & 0.02 & 1886.63 & 42.8 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

@@ -1,0 +1,1794 @@
+{
+  "datasets": [
+    {
+      "dataset": "toy",
+      "num_stops": 8,
+      "num_edges": 8,
+      "vehicle_capacity": 70,
+      "total_demand": 2622.0,
+      "pool_size": 8,
+      "cost_params": {
+        "fixed": 50.0,
+        "per_length": 0.05,
+        "per_edge": 0.05
+      },
+      "solver": {
+        "name": "auto",
+        "status": "optimal",
+        "objective": 703.8000000000001,
+        "solve_time_seconds": 0.0024570999667048454,
+        "mip_gap": 0.0
+      },
+      "lines": [
+        {
+          "id": 2,
+          "edges": [
+            2,
+            6,
+            8
+          ],
+          "nodes": [
+            2,
+            3,
+            6,
+            8
+          ],
+          "length": 3.0,
+          "cost": 50.3,
+          "frequency": 4
+        },
+        {
+          "id": 3,
+          "edges": [
+            5
+          ],
+          "nodes": [
+            5,
+            6
+          ],
+          "length": 0.8,
+          "cost": 50.089999999999996,
+          "frequency": 3
+        },
+        {
+          "id": 4,
+          "edges": [
+            6,
+            5
+          ],
+          "nodes": [
+            3,
+            6,
+            5
+          ],
+          "length": 1.8,
+          "cost": 50.190000000000005,
+          "frequency": 3
+        },
+        {
+          "id": 6,
+          "edges": [
+            4,
+            5,
+            6
+          ],
+          "nodes": [
+            4,
+            5,
+            6,
+            3
+          ],
+          "length": 2.8,
+          "cost": 50.29,
+          "frequency": 1
+        },
+        {
+          "id": 8,
+          "edges": [
+            1,
+            3,
+            4,
+            5,
+            7
+          ],
+          "nodes": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "length": 4.8,
+          "cost": 50.49,
+          "frequency": 3
+        }
+      ],
+      "validation": {
+        "is_feasible": true,
+        "total_cost": 703.8,
+        "active_lines": 5,
+        "total_line_frequencies": 14,
+        "direct_travelers": 2240.0,
+        "total_demand": 2622.0,
+        "direct_traveler_percentage": 85.43096872616324,
+        "min_frequency_violations": [],
+        "max_frequency_violations": []
+      }
+    },
+    {
+      "dataset": "mandl",
+      "num_stops": 15,
+      "num_edges": 21,
+      "vehicle_capacity": 450,
+      "total_demand": 15570.0,
+      "pool_size": 154,
+      "cost_params": {
+        "fixed": 50.0,
+        "per_length": 0.05,
+        "per_edge": 0.05
+      },
+      "solver": {
+        "name": "auto",
+        "status": "optimal",
+        "objective": 1933.3175000000003,
+        "solve_time_seconds": 0.009566999971866608,
+        "mip_gap": 0.0
+      },
+      "lines": [
+        {
+          "id": 21,
+          "edges": [
+            15,
+            12,
+            11
+          ],
+          "nodes": [
+            9,
+            15,
+            7,
+            10
+          ],
+          "length": 11.33,
+          "cost": 50.716499999999996,
+          "frequency": 2
+        },
+        {
+          "id": 41,
+          "edges": [
+            1,
+            4
+          ],
+          "nodes": [
+            1,
+            2,
+            5
+          ],
+          "length": 9.33,
+          "cost": 50.566500000000005,
+          "frequency": 4
+        },
+        {
+          "id": 49,
+          "edges": [
+            19,
+            16,
+            17
+          ],
+          "nodes": [
+            12,
+            11,
+            10,
+            13
+          ],
+          "length": 16.67,
+          "cost": 50.9835,
+          "frequency": 6
+        },
+        {
+          "id": 68,
+          "edges": [
+            20,
+            16,
+            18
+          ],
+          "nodes": [
+            13,
+            11,
+            10,
+            14
+          ],
+          "length": 11.99,
+          "cost": 50.7495,
+          "frequency": 3
+        },
+        {
+          "id": 74,
+          "edges": [
+            1,
+            2,
+            5,
+            9,
+            13,
+            17
+          ],
+          "nodes": [
+            1,
+            2,
+            3,
+            6,
+            8,
+            10,
+            13
+          ],
+          "length": 22.2,
+          "cost": 51.41,
+          "frequency": 4
+        },
+        {
+          "id": 98,
+          "edges": [
+            6,
+            8,
+            19
+          ],
+          "nodes": [
+            5,
+            4,
+            12,
+            11
+          ],
+          "length": 16.009999999999998,
+          "cost": 50.9505,
+          "frequency": 4
+        },
+        {
+          "id": 108,
+          "edges": [
+            4,
+            3,
+            8
+          ],
+          "nodes": [
+            5,
+            2,
+            4,
+            12
+          ],
+          "length": 12.67,
+          "cost": 50.7835,
+          "frequency": 2
+        },
+        {
+          "id": 114,
+          "edges": [
+            11,
+            13,
+            14,
+            15
+          ],
+          "nodes": [
+            7,
+            10,
+            8,
+            15,
+            9
+          ],
+          "length": 16.81,
+          "cost": 51.0405,
+          "frequency": 2
+        },
+        {
+          "id": 117,
+          "edges": [
+            20,
+            21
+          ],
+          "nodes": [
+            11,
+            13,
+            14
+          ],
+          "length": 4.96,
+          "cost": 50.348,
+          "frequency": 2
+        },
+        {
+          "id": 142,
+          "edges": [
+            3,
+            7,
+            9,
+            13,
+            18
+          ],
+          "nodes": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            14
+          ],
+          "length": 16.68,
+          "cost": 51.084,
+          "frequency": 1
+        },
+        {
+          "id": 149,
+          "edges": [
+            11,
+            18
+          ],
+          "nodes": [
+            7,
+            10,
+            14
+          ],
+          "length": 10.0,
+          "cost": 50.6,
+          "frequency": 3
+        },
+        {
+          "id": 151,
+          "edges": [
+            13,
+            18
+          ],
+          "nodes": [
+            8,
+            10,
+            14
+          ],
+          "length": 10.66,
+          "cost": 50.633,
+          "frequency": 1
+        },
+        {
+          "id": 153,
+          "edges": [
+            15,
+            10,
+            7,
+            8
+          ],
+          "nodes": [
+            9,
+            15,
+            6,
+            4,
+            12
+          ],
+          "length": 16.83,
+          "cost": 51.0415,
+          "frequency": 4
+        }
+      ],
+      "validation": {
+        "is_feasible": true,
+        "total_cost": 1933.3174999999999,
+        "active_lines": 13,
+        "total_line_frequencies": 38,
+        "direct_travelers": 13250.0,
+        "total_demand": 15570.0,
+        "direct_traveler_percentage": 85.09955041746949,
+        "min_frequency_violations": [],
+        "max_frequency_violations": []
+      }
+    },
+    {
+      "dataset": "sioux_falls",
+      "num_stops": 24,
+      "num_edges": 38,
+      "vehicle_capacity": 70,
+      "total_demand": 4114.57,
+      "pool_size": 681,
+      "cost_params": {
+        "fixed": 50.0,
+        "per_length": 0.05,
+        "per_edge": 0.05
+      },
+      "solver": {
+        "name": "auto",
+        "status": "optimal",
+        "objective": 3893.7155,
+        "solve_time_seconds": 0.17838629998732358,
+        "mip_gap": 0.0
+      },
+      "lines": [
+        {
+          "id": 43,
+          "edges": [
+            32,
+            30,
+            28
+          ],
+          "nodes": [
+            20,
+            19,
+            17,
+            16
+          ],
+          "length": 5.3999999999999995,
+          "cost": 50.42,
+          "frequency": 1
+        },
+        {
+          "id": 44,
+          "edges": [
+            31,
+            29
+          ],
+          "nodes": [
+            20,
+            18,
+            16
+          ],
+          "length": 7.76,
+          "cost": 50.488,
+          "frequency": 6
+        },
+        {
+          "id": 46,
+          "edges": [
+            21,
+            22,
+            38
+          ],
+          "nodes": [
+            12,
+            13,
+            24,
+            23
+          ],
+          "length": 8.600000000000001,
+          "cost": 50.58,
+          "frequency": 4
+        },
+        {
+          "id": 58,
+          "edges": [
+            26,
+            17,
+            19
+          ],
+          "nodes": [
+            19,
+            15,
+            10,
+            17
+          ],
+          "length": 6.93,
+          "cost": 50.4965,
+          "frequency": 5
+        },
+        {
+          "id": 90,
+          "edges": [
+            1,
+            2,
+            4,
+            6,
+            8
+          ],
+          "nodes": [
+            2,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "length": 12.200000000000001,
+          "cost": 50.86,
+          "frequency": 2
+        },
+        {
+          "id": 180,
+          "edges": [
+            21,
+            20,
+            16,
+            18
+          ],
+          "nodes": [
+            13,
+            12,
+            11,
+            10,
+            16
+          ],
+          "length": 10.8,
+          "cost": 50.74,
+          "frequency": 4
+        },
+        {
+          "id": 254,
+          "edges": [
+            32,
+            34
+          ],
+          "nodes": [
+            19,
+            20,
+            22
+          ],
+          "length": 5.359999999999999,
+          "cost": 50.368,
+          "frequency": 5
+        },
+        {
+          "id": 272,
+          "edges": [
+            13,
+            14,
+            28
+          ],
+          "nodes": [
+            9,
+            8,
+            16,
+            17
+          ],
+          "length": 4.4,
+          "cost": 50.37,
+          "frequency": 2
+        },
+        {
+          "id": 284,
+          "edges": [
+            21,
+            20,
+            23,
+            25,
+            38
+          ],
+          "nodes": [
+            13,
+            12,
+            11,
+            14,
+            23,
+            24
+          ],
+          "length": 12.4,
+          "cost": 50.87,
+          "frequency": 1
+        },
+        {
+          "id": 337,
+          "edges": [
+            24,
+            26,
+            30,
+            28,
+            14,
+            10
+          ],
+          "nodes": [
+            14,
+            15,
+            19,
+            17,
+            16,
+            8,
+            6
+          ],
+          "length": 8.799999999999999,
+          "cost": 50.739999999999995,
+          "frequency": 1
+        },
+        {
+          "id": 356,
+          "edges": [
+            10,
+            13,
+            15,
+            17,
+            27,
+            35
+          ],
+          "nodes": [
+            6,
+            8,
+            9,
+            10,
+            15,
+            22,
+            21
+          ],
+          "length": 9.8,
+          "cost": 50.79,
+          "frequency": 1
+        },
+        {
+          "id": 357,
+          "edges": [
+            35,
+            27,
+            24,
+            23,
+            7
+          ],
+          "nodes": [
+            21,
+            22,
+            15,
+            14,
+            11,
+            4
+          ],
+          "length": 9.6,
+          "cost": 50.73,
+          "frequency": 3
+        },
+        {
+          "id": 415,
+          "edges": [
+            34,
+            37,
+            25,
+            23,
+            7
+          ],
+          "nodes": [
+            20,
+            22,
+            23,
+            14,
+            11,
+            4
+          ],
+          "length": 10.56,
+          "cost": 50.778,
+          "frequency": 3
+        },
+        {
+          "id": 421,
+          "edges": [
+            18,
+            17,
+            24
+          ],
+          "nodes": [
+            16,
+            10,
+            15,
+            14
+          ],
+          "length": 6.3999999999999995,
+          "cost": 50.47,
+          "frequency": 1
+        },
+        {
+          "id": 451,
+          "edges": [
+            10,
+            11,
+            12,
+            31
+          ],
+          "nodes": [
+            6,
+            8,
+            7,
+            18,
+            20
+          ],
+          "length": 10.16,
+          "cost": 50.708000000000006,
+          "frequency": 2
+        },
+        {
+          "id": 473,
+          "edges": [
+            31,
+            33
+          ],
+          "nodes": [
+            18,
+            20,
+            21
+          ],
+          "length": 7.76,
+          "cost": 50.488,
+          "frequency": 1
+        },
+        {
+          "id": 505,
+          "edges": [
+            5,
+            2,
+            1
+          ],
+          "nodes": [
+            12,
+            3,
+            1,
+            2
+          ],
+          "length": 9.2,
+          "cost": 50.61,
+          "frequency": 1
+        },
+        {
+          "id": 532,
+          "edges": [
+            1,
+            3,
+            8
+          ],
+          "nodes": [
+            1,
+            2,
+            6,
+            5
+          ],
+          "length": 8.8,
+          "cost": 50.589999999999996,
+          "frequency": 3
+        },
+        {
+          "id": 543,
+          "edges": [
+            31
+          ],
+          "nodes": [
+            20,
+            18
+          ],
+          "length": 5.76,
+          "cost": 50.337999999999994,
+          "frequency": 3
+        },
+        {
+          "id": 556,
+          "edges": [
+            11,
+            13,
+            9,
+            6
+          ],
+          "nodes": [
+            7,
+            8,
+            9,
+            5,
+            4
+          ],
+          "length": 7.0,
+          "cost": 50.550000000000004,
+          "frequency": 1
+        },
+        {
+          "id": 564,
+          "edges": [
+            35,
+            37,
+            25,
+            23,
+            7,
+            4
+          ],
+          "nodes": [
+            21,
+            22,
+            23,
+            14,
+            11,
+            4,
+            3
+          ],
+          "length": 11.2,
+          "cost": 50.86,
+          "frequency": 1
+        },
+        {
+          "id": 571,
+          "edges": [
+            32,
+            30,
+            19,
+            15,
+            9
+          ],
+          "nodes": [
+            20,
+            19,
+            17,
+            10,
+            9,
+            5
+          ],
+          "length": 8.93,
+          "cost": 50.6965,
+          "frequency": 2
+        },
+        {
+          "id": 583,
+          "edges": [
+            1
+          ],
+          "nodes": [
+            1,
+            2
+          ],
+          "length": 5.4,
+          "cost": 50.32,
+          "frequency": 10
+        },
+        {
+          "id": 599,
+          "edges": [
+            36,
+            33,
+            31
+          ],
+          "nodes": [
+            24,
+            21,
+            20,
+            18
+          ],
+          "length": 9.559999999999999,
+          "cost": 50.628,
+          "frequency": 3
+        },
+        {
+          "id": 603,
+          "edges": [
+            22,
+            21,
+            5
+          ],
+          "nodes": [
+            24,
+            13,
+            12,
+            3
+          ],
+          "length": 9.4,
+          "cost": 50.62,
+          "frequency": 1
+        },
+        {
+          "id": 608,
+          "edges": [
+            5,
+            21
+          ],
+          "nodes": [
+            3,
+            12,
+            13
+          ],
+          "length": 7.800000000000001,
+          "cost": 50.49,
+          "frequency": 4
+        },
+        {
+          "id": 654,
+          "edges": [
+            3,
+            8,
+            6,
+            4,
+            5,
+            21
+          ],
+          "nodes": [
+            2,
+            6,
+            5,
+            4,
+            3,
+            12,
+            13
+          ],
+          "length": 14.6,
+          "cost": 51.029999999999994,
+          "frequency": 1
+        },
+        {
+          "id": 671,
+          "edges": [
+            37,
+            27,
+            17,
+            18,
+            14,
+            11
+          ],
+          "nodes": [
+            23,
+            22,
+            15,
+            10,
+            16,
+            8,
+            7
+          ],
+          "length": 10.8,
+          "cost": 50.839999999999996,
+          "frequency": 1
+        },
+        {
+          "id": 673,
+          "edges": [
+            21,
+            20,
+            16,
+            15,
+            13,
+            11
+          ],
+          "nodes": [
+            13,
+            12,
+            11,
+            10,
+            9,
+            8,
+            7
+          ],
+          "length": 14.0,
+          "cost": 51.0,
+          "frequency": 1
+        },
+        {
+          "id": 676,
+          "edges": [
+            36,
+            33,
+            31,
+            12
+          ],
+          "nodes": [
+            24,
+            21,
+            20,
+            18,
+            7
+          ],
+          "length": 10.759999999999998,
+          "cost": 50.738,
+          "frequency": 2
+        },
+        {
+          "id": 680,
+          "edges": [
+            11,
+            13,
+            9,
+            6,
+            4,
+            2
+          ],
+          "nodes": [
+            7,
+            8,
+            9,
+            5,
+            4,
+            3,
+            1
+          ],
+          "length": 10.0,
+          "cost": 50.8,
+          "frequency": 1
+        }
+      ],
+      "validation": {
+        "is_feasible": true,
+        "total_cost": 3893.7155,
+        "active_lines": 31,
+        "total_line_frequencies": 77,
+        "direct_travelers": 3013.08,
+        "total_demand": 4114.57,
+        "direct_traveler_percentage": 73.22952337668335,
+        "min_frequency_violations": [],
+        "max_frequency_violations": []
+      }
+    },
+    {
+      "dataset": "grid",
+      "num_stops": 25,
+      "num_edges": 40,
+      "vehicle_capacity": 70,
+      "total_demand": 2546.0,
+      "pool_size": 723,
+      "cost_params": {
+        "fixed": 50.0,
+        "per_length": 0.05,
+        "per_edge": 0.05
+      },
+      "solver": {
+        "name": "auto",
+        "status": "optimal",
+        "objective": 812.15,
+        "solve_time_seconds": 1.1912133001023903,
+        "mip_gap": 0.0
+      },
+      "lines": [
+        {
+          "id": 16,
+          "edges": [
+            26,
+            6,
+            30
+          ],
+          "nodes": [
+            12,
+            7,
+            8,
+            13
+          ],
+          "length": 6.0,
+          "cost": 50.449999999999996,
+          "frequency": 1
+        },
+        {
+          "id": 31,
+          "edges": [
+            33,
+            7,
+            30
+          ],
+          "nodes": [
+            4,
+            9,
+            8,
+            13
+          ],
+          "length": 6.0,
+          "cost": 50.449999999999996,
+          "frequency": 1
+        },
+        {
+          "id": 164,
+          "edges": [
+            24,
+            17,
+            18,
+            19,
+            20
+          ],
+          "nodes": [
+            16,
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "length": 10.0,
+          "cost": 50.75,
+          "frequency": 1
+        },
+        {
+          "id": 231,
+          "edges": [
+            1,
+            21,
+            5
+          ],
+          "nodes": [
+            2,
+            1,
+            6,
+            7
+          ],
+          "length": 6.0,
+          "cost": 50.449999999999996,
+          "frequency": 1
+        },
+        {
+          "id": 252,
+          "edges": [
+            22,
+            9,
+            10,
+            11,
+            12,
+            39,
+            40
+          ],
+          "nodes": [
+            6,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            25
+          ],
+          "length": 14.0,
+          "cost": 51.050000000000004,
+          "frequency": 1
+        },
+        {
+          "id": 348,
+          "edges": [
+            2,
+            25,
+            6,
+            30,
+            31,
+            32
+          ],
+          "nodes": [
+            3,
+            2,
+            7,
+            8,
+            13,
+            18,
+            23
+          ],
+          "length": 12.0,
+          "cost": 50.9,
+          "frequency": 1
+        },
+        {
+          "id": 381,
+          "edges": [
+            30,
+            10,
+            9,
+            23
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            11,
+            16
+          ],
+          "length": 8.0,
+          "cost": 50.6,
+          "frequency": 1
+        },
+        {
+          "id": 420,
+          "edges": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "nodes": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "length": 8.0,
+          "cost": 50.6,
+          "frequency": 1
+        },
+        {
+          "id": 430,
+          "edges": [
+            14,
+            27,
+            26,
+            25,
+            1
+          ],
+          "nodes": [
+            18,
+            17,
+            12,
+            7,
+            2,
+            1
+          ],
+          "length": 10.0,
+          "cost": 50.75,
+          "frequency": 1
+        },
+        {
+          "id": 541,
+          "edges": [
+            37,
+            8,
+            7,
+            30,
+            31,
+            32
+          ],
+          "nodes": [
+            5,
+            10,
+            9,
+            8,
+            13,
+            18,
+            23
+          ],
+          "length": 12.0,
+          "cost": 50.9,
+          "frequency": 1
+        },
+        {
+          "id": 589,
+          "edges": [
+            38,
+            12,
+            11,
+            10,
+            27,
+            28
+          ],
+          "nodes": [
+            10,
+            15,
+            14,
+            13,
+            12,
+            17,
+            22
+          ],
+          "length": 12.0,
+          "cost": 50.9,
+          "frequency": 1
+        },
+        {
+          "id": 614,
+          "edges": [
+            10,
+            30,
+            29,
+            3,
+            4
+          ],
+          "nodes": [
+            12,
+            13,
+            8,
+            3,
+            4,
+            5
+          ],
+          "length": 10.0,
+          "cost": 50.75,
+          "frequency": 1
+        },
+        {
+          "id": 659,
+          "edges": [
+            15,
+            31,
+            30,
+            29,
+            2,
+            1
+          ],
+          "nodes": [
+            19,
+            18,
+            13,
+            8,
+            3,
+            2,
+            1
+          ],
+          "length": 12.0,
+          "cost": 50.9,
+          "frequency": 2
+        },
+        {
+          "id": 719,
+          "edges": [
+            20,
+            36,
+            35,
+            34,
+            7,
+            6
+          ],
+          "nodes": [
+            25,
+            24,
+            19,
+            14,
+            9,
+            8,
+            7
+          ],
+          "length": 12.0,
+          "cost": 50.9,
+          "frequency": 1
+        },
+        {
+          "id": 721,
+          "edges": [
+            20,
+            36,
+            35,
+            11,
+            10,
+            9
+          ],
+          "nodes": [
+            25,
+            24,
+            19,
+            14,
+            13,
+            12,
+            11
+          ],
+          "length": 12.0,
+          "cost": 50.9,
+          "frequency": 1
+        }
+      ],
+      "validation": {
+        "is_feasible": true,
+        "total_cost": 812.15,
+        "active_lines": 15,
+        "total_line_frequencies": 16,
+        "direct_travelers": 2008.0,
+        "total_demand": 2546.0,
+        "direct_traveler_percentage": 78.8688138256088,
+        "min_frequency_violations": [],
+        "max_frequency_violations": []
+      }
+    },
+    {
+      "dataset": "athens",
+      "num_stops": 51,
+      "num_edges": 52,
+      "vehicle_capacity": 1086,
+      "total_demand": 63323.0,
+      "pool_size": 59,
+      "cost_params": {
+        "fixed": 50.0,
+        "per_length": 0.05,
+        "per_edge": 0.05
+      },
+      "solver": {
+        "name": "auto",
+        "status": "optimal",
+        "objective": 1886.6268265,
+        "solve_time_seconds": 0.010718500008806586,
+        "mip_gap": 0.0
+      },
+      "lines": [
+        {
+          "id": 4,
+          "edges": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "nodes": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "length": 12.582130000000001,
+          "cost": 51.2791065,
+          "frequency": 2
+        },
+        {
+          "id": 9,
+          "edges": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "nodes": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "length": 23.54783,
+          "cost": 52.3273915,
+          "frequency": 1
+        },
+        {
+          "id": 14,
+          "edges": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "nodes": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "length": 13.7582,
+          "cost": 51.43791,
+          "frequency": 1
+        },
+        {
+          "id": 23,
+          "edges": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "nodes": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "length": 5.66561,
+          "cost": 50.6332805,
+          "frequency": 2
+        },
+        {
+          "id": 32,
+          "edges": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "nodes": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "length": 12.48331,
+          "cost": 51.274165499999995,
+          "frequency": 2
+        },
+        {
+          "id": 44,
+          "edges": [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "nodes": [
+            25,
+            26,
+            14,
+            27,
+            28,
+            16,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "length": 10.84859,
+          "cost": 51.192429499999996,
+          "frequency": 2
+        },
+        {
+          "id": 46,
+          "edges": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "nodes": [
+            26,
+            14,
+            27,
+            28,
+            16,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "length": 7.83294,
+          "cost": 50.941646999999996,
+          "frequency": 1
+        },
+        {
+          "id": 48,
+          "edges": [
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "nodes": [
+            14,
+            27,
+            28,
+            16,
+            29,
+            30
+          ],
+          "length": 3.39445,
+          "cost": 50.4197225,
+          "frequency": 4
+        },
+        {
+          "id": 49,
+          "edges": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "nodes": [
+            14,
+            27,
+            28,
+            16,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "length": 6.99048,
+          "cost": 50.849524,
+          "frequency": 5
+        },
+        {
+          "id": 55,
+          "edges": [
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "nodes": [
+            37,
+            38,
+            39,
+            17,
+            30,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "length": 10.823830000000001,
+          "cost": 51.0411915,
+          "frequency": 7
+        },
+        {
+          "id": 57,
+          "edges": [
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "nodes": [
+            30,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "length": 5.68672,
+          "cost": 50.584336,
+          "frequency": 1
+        },
+        {
+          "id": 58,
+          "edges": [
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ],
+          "nodes": [
+            30,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "length": 11.02907,
+          "cost": 50.9514535,
+          "frequency": 7
+        },
+        {
+          "id": 59,
+          "edges": [
+            49,
+            50,
+            51,
+            52
+          ],
+          "nodes": [
+            47,
+            48,
+            49,
+            50,
+            51
+          ],
+          "length": 23.02553,
+          "cost": 51.351276500000004,
+          "frequency": 2
+        }
+      ],
+      "validation": {
+        "is_feasible": true,
+        "total_cost": 1886.6268264999999,
+        "active_lines": 13,
+        "total_line_frequencies": 37,
+        "direct_travelers": 29491.0,
+        "total_demand": 63323.0,
+        "direct_traveler_percentage": 46.57233548631619,
+        "min_frequency_violations": [],
+        "max_frequency_violations": []
+      }
+    }
+  ]
+}

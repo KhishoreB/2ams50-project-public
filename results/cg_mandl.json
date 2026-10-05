@@ -1,0 +1,679 @@
+{
+  "dataset": "mandl",
+  "num_stops": 15,
+  "num_edges": 21,
+  "vehicle_capacity": 450,
+  "total_demand": 15570.0,
+  "pool_size": 34,
+  "cost_params": {
+    "fixed": 50.0,
+    "per_length": 0.05,
+    "per_edge": 0.05
+  },
+  "solver": {
+    "name": "column_generation",
+    "status": "optimal",
+    "objective": 981.7890000000001,
+    "solve_time_seconds": 0.010632699937559664,
+    "mip_gap": 0.0
+  },
+  "lines": [
+    {
+      "id": 74,
+      "edges": [
+        1,
+        2,
+        5,
+        9,
+        13,
+        17
+      ],
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        10,
+        13
+      ],
+      "length": 22.2,
+      "cost": 51.41,
+      "frequency": 1
+    },
+    {
+      "id": 114,
+      "edges": [
+        11,
+        13,
+        14,
+        15
+      ],
+      "nodes": [
+        7,
+        10,
+        8,
+        15,
+        9
+      ],
+      "length": 16.81,
+      "cost": 51.0405,
+      "frequency": 2
+    },
+    {
+      "id": 149,
+      "edges": [
+        11,
+        18
+      ],
+      "nodes": [
+        7,
+        10,
+        14
+      ],
+      "length": 10.0,
+      "cost": 50.6,
+      "frequency": 2
+    },
+    {
+      "id": 151,
+      "edges": [
+        13,
+        18
+      ],
+      "nodes": [
+        8,
+        10,
+        14
+      ],
+      "length": 10.66,
+      "cost": 50.633,
+      "frequency": 3
+    },
+    {
+      "id": 154,
+      "edges": [
+        1,
+        4,
+        6,
+        8,
+        19,
+        20,
+        21,
+        18,
+        11,
+        12,
+        15
+      ],
+      "nodes": [
+        1,
+        2,
+        5,
+        4,
+        12,
+        11,
+        13,
+        14,
+        10,
+        7,
+        15,
+        9
+      ],
+      "length": 46.96,
+      "cost": 52.897999999999996,
+      "frequency": 1
+    },
+    {
+      "id": 158,
+      "edges": [
+        4,
+        2,
+        5,
+        7,
+        8,
+        19,
+        20,
+        17,
+        13,
+        14,
+        15
+      ],
+      "nodes": [
+        5,
+        2,
+        3,
+        6,
+        4,
+        12,
+        11,
+        13,
+        10,
+        8,
+        15,
+        9
+      ],
+      "length": 45.67,
+      "cost": 52.8335,
+      "frequency": 1
+    },
+    {
+      "id": 160,
+      "edges": [
+        15,
+        10,
+        7,
+        8,
+        19,
+        20,
+        17,
+        18
+      ],
+      "nodes": [
+        9,
+        15,
+        6,
+        4,
+        12,
+        11,
+        13,
+        10,
+        14
+      ],
+      "length": 38.83,
+      "cost": 52.341499999999996,
+      "frequency": 2
+    },
+    {
+      "id": 161,
+      "edges": [
+        1,
+        4,
+        6,
+        8,
+        19,
+        16,
+        17
+      ],
+      "nodes": [
+        1,
+        2,
+        5,
+        4,
+        12,
+        11,
+        10,
+        13
+      ],
+      "length": 35.34,
+      "cost": 52.117000000000004,
+      "frequency": 4
+    },
+    {
+      "id": 163,
+      "edges": [
+        15,
+        10,
+        5,
+        2,
+        3,
+        8,
+        19,
+        16,
+        17,
+        21
+      ],
+      "nodes": [
+        9,
+        15,
+        6,
+        3,
+        2,
+        4,
+        12,
+        11,
+        10,
+        13,
+        14
+      ],
+      "length": 37.98,
+      "cost": 52.399,
+      "frequency": 1
+    },
+    {
+      "id": 164,
+      "edges": [
+        1,
+        3,
+        8,
+        19,
+        20,
+        17,
+        11
+      ],
+      "nodes": [
+        1,
+        2,
+        4,
+        12,
+        11,
+        13,
+        10,
+        7
+      ],
+      "length": 35.34,
+      "cost": 52.117000000000004,
+      "frequency": 1
+    },
+    {
+      "id": 167,
+      "edges": [
+        1,
+        3,
+        7,
+        9,
+        13,
+        11,
+        12,
+        15
+      ],
+      "nodes": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10,
+        7,
+        15,
+        9
+      ],
+      "length": 28.01,
+      "cost": 51.8005,
+      "frequency": 1
+    }
+  ],
+  "validation": {
+    "is_feasible": true,
+    "total_cost": 981.789,
+    "active_lines": 11,
+    "total_line_frequencies": 19,
+    "direct_travelers": 15390.0,
+    "total_demand": 15570.0,
+    "direct_traveler_percentage": 98.84393063583815,
+    "min_frequency_violations": [],
+    "max_frequency_violations": []
+  },
+  "column_generation": {
+    "status": "optimal_no_negative_reduced_cost",
+    "iterations": 22,
+    "lp_objective": 981.7145,
+    "time_seconds": 0.5436465999810025,
+    "seed_pool_size": 13,
+    "lines_generated": 21,
+    "lp_frequencies": {
+      "74": 1.9166666666666667,
+      "114": 1.5555555555555554,
+      "149": 0.9722222222222223,
+      "151": 4.0,
+      "154": 0.8611111111111109,
+      "157": 0.5,
+      "159": 0.08333333333333326,
+      "160": 1.7222222222222223,
+      "161": 3.1388888888888893,
+      "164": 0.4722222222222221,
+      "165": 1.0833333333333333,
+      "170": 0.6944444444444444,
+      "171": 1.5,
+      "172": 0.44444444444444464,
+      "174": 0.0555555555555558
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "rmp_objective": 1933.3174999999999,
+        "candidate_edges": [
+          1,
+          4,
+          6,
+          8,
+          19,
+          20,
+          21,
+          18,
+          11,
+          12,
+          15
+        ],
+        "candidate_reduced_cost": -190.0751
+      },
+      {
+        "iteration": 2,
+        "rmp_objective": 1237.086,
+        "candidate_edges": [
+          14,
+          10,
+          5,
+          2,
+          3,
+          8,
+          19,
+          20,
+          17,
+          18
+        ],
+        "candidate_reduced_cost": -150.905
+      },
+      {
+        "iteration": 3,
+        "rmp_objective": 1184.8035,
+        "candidate_edges": [
+          16,
+          13,
+          9,
+          7,
+          8
+        ],
+        "candidate_reduced_cost": -99.6395
+      },
+      {
+        "iteration": 4,
+        "rmp_objective": 1086.7005,
+        "candidate_edges": [
+          4,
+          3,
+          7,
+          10,
+          12,
+          11,
+          17
+        ],
+        "candidate_reduced_cost": -103.2645
+      },
+      {
+        "iteration": 5,
+        "rmp_objective": 1052.3667083333332,
+        "candidate_edges": [
+          4,
+          2,
+          5,
+          7,
+          8,
+          19,
+          20,
+          17,
+          13,
+          14,
+          15
+        ],
+        "candidate_reduced_cost": -50.498374999999996
+      },
+      {
+        "iteration": 6,
+        "rmp_objective": 986.54075,
+        "candidate_edges": [
+          1,
+          3,
+          8,
+          19,
+          16,
+          13,
+          9,
+          10,
+          15
+        ],
+        "candidate_reduced_cost": -6.6310000000000215
+      },
+      {
+        "iteration": 7,
+        "rmp_objective": 985.29275,
+        "candidate_edges": [
+          15,
+          10,
+          7,
+          8,
+          19,
+          20,
+          17,
+          18
+        ],
+        "candidate_reduced_cost": -1.088249999999995
+      },
+      {
+        "iteration": 8,
+        "rmp_objective": 984.1879642857143,
+        "candidate_edges": [
+          1,
+          4,
+          6,
+          8,
+          19,
+          16,
+          17
+        ],
+        "candidate_reduced_cost": -0.7382857142857091
+      },
+      {
+        "iteration": 9,
+        "rmp_objective": 982.84275,
+        "candidate_edges": [
+          19,
+          8,
+          7,
+          9,
+          13,
+          17,
+          21
+        ],
+        "candidate_reduced_cost": -1.2766249999999815
+      },
+      {
+        "iteration": 10,
+        "rmp_objective": 982.4675555555556,
+        "candidate_edges": [
+          15,
+          10,
+          5,
+          2,
+          3,
+          8,
+          19,
+          16,
+          17,
+          21
+        ],
+        "candidate_reduced_cost": -1.0104444444444312
+      },
+      {
+        "iteration": 11,
+        "rmp_objective": 982.4286923076922,
+        "candidate_edges": [
+          1,
+          3,
+          8,
+          19,
+          20,
+          17,
+          11
+        ],
+        "candidate_reduced_cost": -0.6115000000000279
+      },
+      {
+        "iteration": 12,
+        "rmp_objective": 982.0547659574468,
+        "candidate_edges": [
+          1,
+          2,
+          5,
+          7,
+          8,
+          19,
+          16,
+          11,
+          12,
+          15
+        ],
+        "candidate_reduced_cost": -0.3563936170214461
+      },
+      {
+        "iteration": 13,
+        "rmp_objective": 981.9718837209304,
+        "candidate_edges": [
+          15,
+          12,
+          11,
+          13,
+          9,
+          5,
+          2,
+          3,
+          8
+        ],
+        "candidate_reduced_cost": -0.30031395348834167
+      },
+      {
+        "iteration": 14,
+        "rmp_objective": 981.9718837209302,
+        "candidate_edges": [
+          1,
+          3,
+          7,
+          9,
+          13,
+          11,
+          12,
+          15
+        ],
+        "candidate_reduced_cost": -0.18288372093022787
+      },
+      {
+        "iteration": 15,
+        "rmp_objective": 981.789,
+        "candidate_edges": [
+          4,
+          3,
+          7,
+          9,
+          13,
+          16,
+          20,
+          21
+        ],
+        "candidate_reduced_cost": -0.1500354330709186
+      },
+      {
+        "iteration": 16,
+        "rmp_objective": 981.789,
+        "candidate_edges": [
+          8,
+          7,
+          9,
+          13,
+          17,
+          21
+        ],
+        "candidate_reduced_cost": -0.11973214285714562
+      },
+      {
+        "iteration": 17,
+        "rmp_objective": 981.789,
+        "candidate_edges": [
+          15,
+          10,
+          7,
+          8,
+          19,
+          16,
+          17,
+          21
+        ],
+        "candidate_reduced_cost": -0.11357142857148261
+      },
+      {
+        "iteration": 18,
+        "rmp_objective": 981.789,
+        "candidate_edges": [
+          4,
+          3,
+          8,
+          19,
+          20,
+          17,
+          11,
+          12,
+          15
+        ],
+        "candidate_reduced_cost": -0.0967499999999788
+      },
+      {
+        "iteration": 19,
+        "rmp_objective": 981.7375,
+        "candidate_edges": [
+          1,
+          3,
+          8,
+          19,
+          20,
+          21,
+          18,
+          13,
+          14,
+          15
+        ],
+        "candidate_reduced_cost": -0.10999999999997101
+      },
+      {
+        "iteration": 20,
+        "rmp_objective": 981.7145666666667,
+        "candidate_edges": [
+          5,
+          10,
+          12,
+          11,
+          17
+        ],
+        "candidate_reduced_cost": -0.009566666666657397
+      },
+      {
+        "iteration": 21,
+        "rmp_objective": 981.7145666666667,
+        "candidate_edges": [
+          15,
+          12,
+          11,
+          17
+        ],
+        "candidate_reduced_cost": -0.0012000000000114142
+      },
+      {
+        "iteration": 22,
+        "rmp_objective": 981.7145,
+        "candidate_edges": [
+          4,
+          3,
+          8,
+          19,
+          16,
+          13,
+          9,
+          10,
+          15
+        ],
+        "candidate_reduced_cost": -4.263256414560601e-14
+      }
+    ],
+    "full_lp_check": {
+      "simple_paths": 2951,
+      "objective": 981.7145,
+      "difference": 0.0
+    },
+    "gap_to_lp_bound": 0.0745000000000573,
+    "baseline_mip_objective": 1933.3175000000003,
+    "checks": {
+      "CG stopped with no negative reduced cost": true,
+      "RMP objective never increases": true,
+      "CG LP equals full LP over every simple path": true,
+      "Integer plan is feasible": true,
+      "Integer plan is not below the LP bound": true
+    }
+  }
+}

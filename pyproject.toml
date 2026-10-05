@@ -1,0 +1,18 @@
+[project]
+name = "2ams50-assignment-2026q1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "gurobipy>=13.0.3",
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.5",
+    "pyscipopt>=6.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "matplotlib>=3.11.2",
+]

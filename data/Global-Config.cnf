@@ -1,0 +1,1372 @@
+# -----------------------------------------------------------------------------
+# === CONVENTIONS =============================================================
+# -----------------------------------------------------------------------------
+# --- 1. A setting is a pair of "setting_name; setting_value".              ---
+# --- 2. This file contains all official config settings.                   ---
+# --- 3. Official settings that only make sense for specific examples are   ---
+# ---    outcommented and marked =!!!LOCAL_ONLY!!!=                         ---
+# --- 4. If there are several nontrivial possible setting values for a      ---
+# ---    certain setting name, they are commented out and listed around the ---
+# ---    original setting.                                                  ---
+# --- 5. There are other conventions. Have a close look at this file and    ---
+# ---    you will discover them.                                            ---
+# -----------------------------------------------------------------------------
+#
+# -----------------------------------------------------------------------------
+# === General Properties (gen_*) ==============================================
+# -----------------------------------------------------------------------------
+# speed of the vehicles in km/h
+# =!!!LOCAL_ONLY!!!= # gen_vehicle_speed; 200
+# conversion factor to convert length to kilometer
+# =!!!LOCAL_ONLY!!!= # gen_conversion_length; 1
+# conversion factor to convert the length computed from the coordinates to
+# kilometer
+# =!!!LOCAL_ONLY!!!= # gen_conversion_coordinates; 1
+console_log_level; INFO
+# =!!!LOCAL_ONLY!!!= # gen_passengers_per_vehicle; 100
+gen_walking_utility; 1.5
+gen_adaption_utility; 0
+gen_change_utility; 1
+# =!!!LOCAL_ONLY!!!= # gen_infrastructure_capacity_weight; 1
+#
+# -----------------------------------------------------------------------------
+# === Infrastructure Network (isn_*) ===================================
+# -----------------------------------------------------------------------------
+isn_default_link_capacity; 100
+isn_generate_od; false
+isn_max_distance_coordinates; 0
+#
+# -----------------------------------------------------------------------------
+# === Public Transportation Network (ptn_*) ===================================
+# -----------------------------------------------------------------------------
+# =!!!LOCAL_ONLY!!!= # ptn_name; "Default-Network"
+# =!!!LOCAL_ONLY!!!= # ptn_stop_waiting_time; 1
+ptn_is_undirected; true
+ptn_remember_od_paths; false
+ptn_stop_waiting_time; 3
+ptn_draw_conversion_factor; 1
+ptn_draw_scaling; 30
+ptn_draw_use_coordinates; true
+ptn_draw_existing_ptn; false
+ptn_evaluate_use_travel_time_model; true
+ptn_default_headway_value; 5
+ptn_draw_interactive_graph_edge_labels; false
+#
+# -----------------------------------------------------------------------------
+# === Multimodal ==============================================================
+# -----------------------------------------------------------------------------
+multimodal_transfer_penalty_algorithm; "SIMPLE"
+modality_joint_name; joint
+modality_category; "line-based"
+# modality_category; "ridepooling"
+# modality_category; "nonscheduled"
+#
+# -----------------------------------------------------------------------------
+# === Multimodal Dataset Settings =============================================
+# -----------------------------------------------------------------------------
+# =!!!LOCAL_ONLY!!!= # modalities_all; []
+fixed_timetable_modalities; []
+fixed_concept_modalities; []
+#
+# -----------------------------------------------------------------------------
+# === GENERIC SETTINGS (generic_*) ============================================
+# -----------------------------------------------------------------------------
+generic_64_bit_only; true
+#
+# -----------------------------------------------------------------------------
+# === HEADERS (*_header) ======================================================
+# -----------------------------------------------------------------------------
+config_header; "setting-name; setting-value"
+nodes_header; "node-id; name; x-coordinate; y-coordinate; stop-possible?"
+infrastructure_edge_header; "edge-id; left-node-id; right-node-id; length; lower-bound; upper-bound"
+walking_edge_header; "edge-id; left-node-id; right-node-id; length"
+stops_header; "stop-id; short-name; long-name; x-coordinate; y-coordinate"
+stops_coordinates_header; "stop-id; latitude; longitude"
+edges_header; "edge-id; left-stop-id; right-stop-id; length; lower-bound; upper-bound"
+demand_header; "demand-id; short-name; long-name; x-coordinate; y-coordinate; demand"
+demand_coordinates_header; "demand-id; latitude; longitude"
+headways_header; "edge-id; headway"
+lines_header; "line-id; edge-order; edge-id; frequency"
+lpool_header; "line-id; edge-order; edge-id"
+lpool_cost_header; "line-id; length; cost"
+rpool_header; "area-id; edge-id"
+rpool_vehicle_frequencies_header; "area-id; edge-id; vehicle-frequency-of-edge"
+rpool_stretch_header; "area-id; edge-id; stretch-factor"
+rc_header; "area-id; edge-id; number-of-vehicles"
+rc_vehicle_frequencies_header; "area-id; edge-id; vehicle-frequency-of-edge"
+change_and_go_nodes_header; "node-id; stop-id; line-id"
+change_and_go_edges_header; "edge-id; left-stop-id; right-stop-id; weight, CGEdge-type"
+events_header; "event-id; periodic-id; type; time; passengers; stop-id"
+events_header_periodic; "event-id; type; stop-id; line-id; passengers; line-direction; line-freq-repetition"
+activities_header; "activity-id; periodic-id; type; tail-event-id; head-event-id; lower-bound; upper-bound; passengers"
+activities_header_periodic; "activity-id; type; tail-event-id; head-event-id; lower-bound; upper-bound; passengers"
+timetable_header; "event-id; time"
+timetable_header_periodic; "event-id; time"
+timetable_header_periodic_fixed; "event-id; lower-bound; upper-bound"
+timetable_header_disposition; "event-id; time"
+timetable_header_visum; "line-id;line-code;direction;stop-order;stop-id;frequency;arrival_time;departure_time;line-repetition"
+event_modalities_header; "new-id;modality;old-id;old-line-id"
+nonscheduled_transfers_header; "activity-id; type; tail-event-id; head-event-id; lower-bound; upper-bound; passengers; penalty"
+loads_header; "edge-id; load; lower-frequency; upper-frequency"
+od_header; "left-stop-id; right-stop-id; customers"
+od_nodes_header; "left-node-id; right-node-id; customers"
+od_nodes_assignment_header; "left-node-id; left-stop-id; right-stop-id; right-node-id; customers"
+od_infrastructure_header; "left-node-id; right-node-id; customers"
+cngstops_header; "stop-id; line-id; frequency-id"
+cngedges_header; "tail-stop-id; head_stop-id; weight; customers"
+line_stops_header; "stop-id; line-id; frequency-id"
+line_edges_header; "tail-stop-id; head-stop-id; lower-bound; upper-bound; passengers"
+trip_header; "aperiodic-start-ID; periodic-start-ID; start-stop-id; start-time; aperiodic-end-ID; periodic-end-ID; end-stop-id; end-time; line-id"
+vehicle_schedule_header; "circulation-ID; vehicle-ID; trip-number of this vehicle; type; aperiodic-start-ID; periodic-start-ID; start-stop-id; start-time; aperiodic-end-ID; periodic-end-ID; end-stop-id; end-time; line-id"
+line_capacities_header; "line-id; capacity"
+line_names_header; "line-id; name"
+invalid_load_header; "link-id;load;frequency"
+od_demand_header; "from-zone-id;to-zone-id;passengers"
+od_paths_header; "path-id;from-zone-id;to-stop-id;length;time"
+od_zones_header; "zone-id;x-coordinate;y-coordinate"
+additional_load_header; "edge-id; left-stop-id; right-stop-id; additional-load"
+zone_header; "zone-id; stop-id"
+zone_price_header; "n-traversed-zones; price"
+price_matrix_header; "origin-id; destination-id; price"
+tariff_od_header; "origin-id; destination-id; demand; max-price"
+od_nodes_assignment_header; "origin-node; origin-stop; destination-stop; destination-node; value"
+travel_time_walking_output_header; "origin-node; destination-node; boarding-stop; alighting-stop; demand; perceived-travel-time"
+travel_time_output_header; "left-stop-id; right-stop-id; passengers; perceived-travel-time"
+restricted_turns_header; "first-edge-id; second-edge-id"
+terminals_header; "stop-id"
+change_station_header; "stop-id"
+routing_header; "origin-id; destination-id; node-ids"
+header_timpasslib_events; "event_id;type;stop_id;line_id;line_direction;line_freq_repetition"
+header_timpasslib_od; "origin;destination;customers"
+header_timpasslib_timetable; "event_id;time"
+header_timpasslib_config; "config_key;value"
+depot_header; "depot-id; x-coordinate; y-coordinate; number-of-vehicles"
+infrastructure_link_header; "link-id; left-node-id; right-node-id; length; capacity; modalities; modalities-direction"
+infrastructure_node_header; "node-id; name; x-coordinate; y-coordinate; possible-stop-for-modalities"
+infrastructure_load_header; "link-id; customers"
+infrastructure_node_coordinates_header; "node-id; latitude; longitude"
+ptn_infrastructure_map_header; "ptn-edge-id; infrastructure-link-order; infrastructure-link-id"
+opt_line_pool_order_header; "starting node id; end node id; modality; line-id; position"
+opt_line_concept_order_header; "starting node id; end node id; modality; line-id; position"
+line_colors_header; "line-id; color"
+#
+# -----------------------------------------------------------------------------
+# === FILENAMES (default_*_file) ==============================================
+# -----------------------------------------------------------------------------
+# TODO: remove "default_", new style: "filename_XYZ"
+default_stops_file; "basis/Stop.giv"
+default_stops_coordinates_file; "basis/Stop.giv.geo"
+default_od_file; "basis/OD.giv"
+default_od_expanded_file; "basis/OD-Expanded.giv"
+default_pool_file; "basis/Pool.giv"
+default_pool_cost_file; "basis/Pool-Cost.giv"
+default_edges_file; "basis/Edge.giv"
+default_headways_file; "basis/Headway.giv"
+default_loads_file; "basis/Load.giv"
+default_lines_file; "line-planning/Line-Concept.lin"
+default_lines_default_file; "line-planning/Line-Concept.lin.default"
+default_line_composition_file; "line-planning/Line-composition.lin"
+default_pool_evaluation_file; "line-planning/Concept-Evaluation.txt"
+default_event_delays_file; "delay-management/Delays-Events.giv"
+default_events_file; "timetabling/Events.giv"
+default_events_periodic_file; "timetabling/Events-periodic.giv"
+default_events_expanded_file; "delay-management/Events-expanded.giv"
+default_events_for_nonperiodic_timetabling_file; "timetabling/Events-nonperiodic.giv"
+default_expanded_end_events_of_trips_file; "delay-management/end-events-of-trips.giv"
+default_activity_delays_file; "delay-management/Delays-Activities.giv"
+default_activities_file; "timetabling/Activities.giv"
+default_activities_periodic_file; "timetabling/Activities-periodic.giv"
+default_activities_expanded_file; "delay-management/Activities-expanded.giv"
+default_activities_for_nonperiodic_timetabling_file; "timetabling/Activities-nonperiodic.giv"
+default_passenger_paths_file; "delay-management/Passenger-Paths.giv"
+default_delayed_passenger_paths_file; "delay-management/Passenger-Paths-Delayed.giv"
+default_passenger_delay_table_file; "delay-management/Passenger-Delay-Table.giv"
+default_timetable_file; "timetabling/Timetable.tim"
+default_timetable_periodic_file; "timetabling/Timetable-periodic.tim"
+default_timetable_visum_file; "timetabling/Timetable-visum-nodes.tim"
+default_timetable_expanded_file; "delay-management/Timetable-expanded.tim"
+default_durations_periodic_file; "timetabling/Durations-periodic.tim"
+default_activity_buffer_weight_file; "timetabling/Activities-periodic-buffered-weights.giv"
+default_activity_buffer_file; "timetabling/Activities-periodic-buffered.giv"
+default_activity_relax_file; "timetabling/Activities-periodic-relaxed.giv"
+default_disposition_timetable_file; "delay-management/Timetable-disposition.tim"
+default_pool_graph_file; "graphics/pool-graph.dot"
+default_ptn_graph_file; "graphics/ptn-graph.dot"
+default_ptn_graphviz_file; "graphics/Public-transportation-network.dot"
+default_ptn_station_degree_distribution_file; "statistic/PTN-station-degree-distribution.dat"
+default_ean_graphviz_file; "graphics/Event-activity-network.dot"
+default_timetable_graphviz_file; "graphics/Timetable-periodic.dot"
+default_trips_file; "delay-management/Trips.giv"
+default_ean_cycles_file; "timetabling/Event-activity-cycles.dat"
+default_ean_cycles_graphviz_file; "graphics/Event-activity-network-cycles.dot"
+default_line_graph_file; "graphics/Line-graph.dot"
+default_cng_graph_file; "graphics/Change-and-go.dot"
+default_delay_graph_file; "graphics/delay-graph.dot"
+default_evaluation_lines_file; "line-planning/Evaluation.txt"
+default_evaluation_timetable_file; "timetabling/Evaluation.txt"
+default_evaluation_dm_file; "delay-management/Evaluation.txt"
+default_evaluation_vs_file; "vehicle-scheduling/VS_Evaluation.vs"
+default_statistic_file; "statistic/statistic.sta"
+default_turn_file; "basis/Turn.giv"
+default_debug_od_link_paths_file; "Debug/ODLinkPaths.dbg"
+default_debug_od_activity_paths_file; "Debug/ODActivityPaths.dbg"
+default_vehicle_schedule_file; "vehicle-scheduling/Vehicle_Schedules.vs"
+default_vs_station_distances_file; "vehicle-scheduling/Station_Distances.vs"
+default_existing_stop_file; "basis/Existing-Stop.giv"
+default_existing_edge_file; "basis/Existing-Edge.giv"
+default_demand_file; "basis/Demand.giv"
+default_demand_coordinates_file; "basis/Demand.giv.geo"
+default_perceived_travel_time_output; "timetabling/perceived_travel_time_output.tim"
+filename_depot_file; "basis/Depot.giv"
+# new naming convention
+filename_node_file; "basis/Node.giv"
+filename_infrastructure_edge_file; "basis/Edge-Infrastructure.giv"
+filename_walking_edge_file; "basis/Edge-Walking.giv"
+filename_od_nodes_file; "basis/OD-Node.giv"
+filename_od_node_assignment_file; "basis/OD-Node-Assignment.giv"
+filename_od_relative_partial_sum; "statistic/OD-relative-partial-sum.dat"
+filename_od_visualization_file; "graphics/OD.png"
+filename_ptn_interactive_graph_file; "graphics/ptn-graph.html"
+filename_lc_undirected_line_length_distribution; "statistic/LC-undirected-line-length-distribution.dat"
+filename_lpool_undirected_line_length_distribution; "statistic/LPOOL-undirected-line-length-distribution.dat"
+filename_lc_undirected_link_undirected_line_distribution; "statistic/LC-undirected-link-undirected-line-distribution.dat"
+filename_lpool_undirected_link_undirected_line_distribution; "statistic/LPOOL-undirected-link-undirected-line-distribution.dat"
+filename_lc_station_undirected_line_distribution; "statistic/LC-station-undirected-line-distribution.dat"
+filename_lpool_station_undirected_line_distribution; "statistic/LPOOL-station-undirected-line-distribution.dat"
+filename_initial_duration_assumption; "timetabling/Initial-duration-assumption-periodic.giv"
+filename_event_modalities; "timetabling/Event-Modalities.giv"
+filename_nonscheduled_transfers; "timetabling/Nonscheduled-Transfers.giv"
+filename_state_config; "basis/State-Config.cnf"
+filename_private_config; "basis/Private-Config.cnf"
+filename_after_config; "basis/After-Config.cnf"
+filename_forbidden_links_file; "basis/Edge-forbidden.giv"
+filename_forbidden_infrastructure_edges_file; "basis/Edge-Infrastructure-forbidden.giv"
+filename_lc_fixed_lines; "line-planning/Fixed-Lines.lin"
+filename_lc_fixed_line_capacities; "line-planning/Line-Capacities.lin"
+filename_lc_fixed_line_names; "line-planning/Line-Names.lin"
+filename_change_and_go_nodes_file; "line-planning/Change-And-Go-Nodes.giv"
+filename_change_and_go_edges_file; "line-planning/Change-And-Go-Edges.giv"
+filename_tim_fixed_times; "timetabling/Fixed-timetable-periodic.tim"
+filename_visum_infrastructure_file; "infrastructure.net"
+filename_visum_fixed_lines_file; "visum-fixed-lines.net"
+filename_visum_fixed_times_file; "visum-fixed-times.net"
+filename_visum_additional_edges_file; "additional_edges.net"
+filename_visum_config_file; "config.net"
+filename_visum_od_file; "od.att"
+filename_visum_demand_file; "demand.att"
+filename_visum_walk_file; "walk_times.att"
+filename_visum_timetable_file; "vehicle_journeys.att"
+filename_visum_passenger_path_file; "ÖV-Wege.att"
+filename_visum_vehicle_attributes_file; "veh_units.att"
+filename_visum_restricted_turns_file; "turn_restrictions.net"
+filename_od_demand_file; "basis/Demand-OD.giv"
+filename_demand_paths_file; "basis/Demand-Paths.giv"
+filename_demand_zones_file; "basis/Demand-Zones.giv"
+filename_dm_best_of_all_objectives; "statistic/dm_objectives.sta"
+filename_aperiodic_ean_dot_file; "graphics/Aperiodic-event-activity-network.dot"
+filename_periodic_ean_dot_file; "graphics/Event-activity-network.dot"
+filename_aperiodic_ean_graph_file; "graphics/Aperiodic-event-activity-network.png"
+filename_periodic_ean_graph_file; "graphics/Event-activity-network.png"
+filename_loads_graph_file; "graphics/PTN-Load.png"
+filename_invalid_loads; "statistic/Invalid-Loads.sta"
+filename_objectives_file; "statistic/objectives.sta"
+filename_solver_statistic_file; "statistic/solver_statistic.sta"
+filename_robustness_ml_model; "model.h5"
+filename_robustness_tensor_file_name; "statistic/data.tensor"
+filename_terminals_file; "basis/Terminals.giv"
+filename_change_station_file; "basis/Change-Stations.giv"
+filename_station_limit_file; "basis/Station-Limits.giv"
+filename_tariff_zone_file; "tariff/Zones.taf"
+filename_tariff_zone_price_file; "tariff/Zone-Prices.taf"
+filename_tariff_price_matrix_file; "tariff/Price-Matrix.taf"
+filename_tariff_reference_price_matrix_file; "basis/Reference-Price-Matrix.giv"
+filename_tariff_reference_price_file; "basis/Reference-Prices.giv"
+filename_tariff_heatmap; "graphics/tariff-heatmap.png"
+filename_tariff_ptn_zone_graph; "graphics/ptn-zones.dot"
+filename_tariff_properties_file; "statistic/tariff-properties.sta"
+filename_additional_load_file; "basis/Additional-Load.giv"
+filename_perceived_travel_time_walking; "timetabling/Perceived-traveltime-walking.tim"
+filename_turn_restrictions; "basis/Restricted-Turns.giv"
+filename_turn_restrictions_infrastructure; "basis/Restricted-Turns-Infrastructure.giv"
+gtfs_output_path; "gtfs"
+filename_timpasslib_activities; "timpasslib/Activities.csv"
+filename_timpasslib_events; "timpasslib/Events.csv"
+filename_timpasslib_od; "timpasslib/OD.csv"
+filename_timpasslib_timetable; "timpasslib/Timetable.csv"
+filename_timpasslib_config; "timpasslib/Config.csv"
+filename_routing_ptn_input; "basis/Routing-ptn.giv"
+filename_routing_ptn_output; "basis/Routing-ptn.giv"
+filename_routing_ean_input; "basis/Routing-ean.giv"
+filename_routing_ean_output; "basis/Routing-ean.giv"
+filename_rpool_file; "basis/Ridepooling-Pool.giv"
+filename_rpool_vehicle_frequencies_file; "basis/Ridepooling-Vehicle-Frequencies.giv"
+filename_rpool_stretch_factors_file; "basis/Ridepooling-Stretch-Factors.giv"
+filename_rpool_graph; "graphics/ridepooling-pool-graph.dot"
+filename_rc_file; "line-planning/Ridepooling-Concept.lin"
+filename_rc_vehicle_frequencies_file; "line-planning/Ridepooling-Concept-Vehicle-Frequencies.lin"
+filename_rc_graph; "graphics/ridepooling-concept-graph.dot"
+filename_rplp_file; "graphics/ridepooling-percentage.png"
+filename_delay_animation_file; "graphics/delay-animation.gif"
+filename_infrastructure_link_file; "basis/Infrastructure-Link.giv"
+filename_infrastructure_node_file; "basis/Infrastructure-Node.giv"
+filename_infrastructure_node_coordinates_file; "basis/Infrastructure-Node.giv.geo"
+filename_infrastructure_od_file; "basis/Infrastructure-OD.giv"
+filename_infrastructure_load_file; "basis/Infrastructure-Load.giv"
+filename_ptn_infrastructure_map_file; "basis/PTN-Infrastructure-Map.giv"
+filename_multimodal_ptn_graph_file; "graphics/multimodal-ptn-graph.dot"
+filename_optimized_line_concept_order; "line-planning/Optimized-Line-Concept-Order.giv"
+filename_optimized_line_concept_graph; "graphics/optimized-line-plot.png"
+filename_optimized_line_pool_order; "line-planning/Optimized-Line-Pool-Order.giv"
+filename_optimized_line_pool_graph; "graphics/optimized-pool-plot.png"
+filename_line_colors; "line-planning/Line-Colors.giv"
+filename_modality_colors; "line-planning/Modality-Colors.giv"
+filename_line_names; "line-planning/Line-Names.giv"
+filename_merged_lines; "line-planning/Merged-Lines.giv"
+filename_mm_lc_rc_cg_statistic; "line-planning/mm-travel-time-mip-statistic.sta"
+# ===========================================================================
+# === Stop Location =========================================================
+# ===========================================================================
+sl_distance; "euclidean_norm"
+sl_radius; 100
+sl_new_stop_default_name; "New_Stop_"
+sl_model; "dsl"
+#sl_model; "greedy"
+#sl_model; "dsl-tt"
+#sl_model; "dsl-tt-2"
+#sl_model; "tt"
+#sl_model; "all"
+sl_acceleration; 0.7
+sl_deceleration; 0.7
+sl_waiting_time; 0
+sl_walking_is_directed; false
+sl_max_walking_time; -1
+sl_max_walking_ratio; -1
+sl_max_walking_amount; -1
+sl_destruction_allowed; false
+sl_eval_extended; false
+sl_restricted_turns; false
+sl_cost_of_stop; 100000
+sl_solver; GUROBI
+#sl_solver; XPRESS
+#sl_solver; CPLEX
+#sl_solver; SCIP
+#sl_solver; GLPK
+sl_timelimit; -1 # (-1 = no restriction)
+sl_mip_gap; -1 # (-1 = no restriction)
+sl_threads; -1 # (-1 = no restriction)
+sl_write_lp_file; false
+sl_forbidden_edges; false
+#
+# ===========================================================================
+# === Line Pool Generation ==================================================
+# ===========================================================================
+lpool_model; "tree_based"
+# lpool_model; "k_shortest_paths"
+# lpool_model; "restricted_line_duration"
+# lpool_model; "terminal-to-terminal"
+# lpool_model; "center-periphery"
+# lpool_model; "k_shortest_paths_waiting_times"
+lpool_ratio_od; 0.3
+lpool_add_shortest_paths; true
+lpool_ratio_shortest_paths; 0.5
+lpool_max_iterations; 5
+lpool_costs_fixed; 50
+lpool_costs_length; 0.05
+lpool_costs_edges; 0.05
+lpool_costs_vehicles; 0
+lpool_min_edges; 5
+lpool_min_distance_leaves; 15
+lpool_node_degree_ratio; 0.3
+lpool_min_cover_factor; 2
+lpool_max_cover_factor; 3
+lpool_number_shortest_paths; 1
+lpool_coordinate_factor; 1
+lpool_restricted_maximum_buffer_time; 10
+lpool_restricted_allow_half_period; false
+lpool_restrict_terminals; false
+lpool_restrict_turns; false
+lpool_append_single_edges; false
+lpool_restrict_forbidden_edges; false
+lpool_centers_fraction; 0.25
+lpool_periphery_radius_factor; 1
+lpool_direct_periphery_lines_factor; 0.1
+lpool_center_radius_factor; 0.5
+lpool_concatenate_lines_factor; 0.1
+lpool_min_degree_center; 2
+lpool_min_times_edge_covered; 3
+lpool_max_iter_postprocessing; 100
+lpool_opt_cost; false
+lpool_plot_centers; false
+#
+lpool_adapt_method; trim_all
+#lpool_adapt_method; trim_low_demand
+#lpool_adapt_method; concatenate
+lpool_nb_edges_to_trim; 1
+lpool_trim_capacity_factor; 0.5
+lpool_concatenate_keep_lines; false
+lpool_concatenate_max_length; -1
+lpool_draw_colored; true
+#
+# ===========================================================================
+# === Multimodal Line Pool Generation =======================================
+# ===========================================================================
+# mm_lpool_od_aggregation; NONE
+# mm_lpool_od_aggregation; USE_ISN
+mm_lpool_od_aggregation; USE_MTG
+# ===========================================================================
+# === Ridepooling Pool Generation ===========================================
+# ===========================================================================
+#rpool_model; demand_heuristic
+#rpool_model; tree_based
+#rpool_model; all
+#rpool_model; connected_subgraphs
+rpool_model; node_based
+#rpool_model; induced_subgraphs
+rpool_write_stretch; false
+rpool_induced_min_nodes; 2
+rpool_induced_max_nodes; 5 # (-1 = no restriction)
+rpool_load_factor; 2.86
+rpool_costs_fixed; 5
+rpool_min_edges; 1
+rpool_max_edges; -1 # (-1 = no restriction)
+rpool_compute_vehicle_frequencies; true
+rpool_use_ptn_load; true
+rpool_extend_existing_pool; false
+rpool_respected_line_modality; line
+rpool_draw_colored; true
+rpool_draw_coordinate_factor; 1
+# -----------------------------------------------------------------------------
+# === PERIODIC EVENT ACTIVITY NETWORK CONSTRUCTION (ean_*) ====================
+# === Use these settings to manipulate "make ptn2ean"      ====================
+# -----------------------------------------------------------------------------
+# Skip passenger distribution, raw event activity network
+ean_construction_skip_passenger_distribution; false
+# In program code please refer to ean_model_frequency instead!
+# ean_construction_target_model_frequency; "FREQUENCY_AS_ATTRIBUTE"
+ean_construction_target_model_frequency; "FREQUENCY_AS_MULTIPLICITY"
+# In program code please refer to ean_model_change instead!
+ean_construction_target_model_change; "SIMPLE"
+#ean_construction_target_model_change; "LCM_SIMPLIFICATION"
+# In program code please refer to ean_model_frequency instead!
+ean_construction_target_model_headway; "NO_HEADWAYS"
+# ean_construction_target_model_headway; "SIMPLE"
+# ean_construction_target_model_headway; "PRODUCT_OF_FREQUENCIES"
+# ean_construction_target_model_headway; "LCM_OF_FREQUENCIES"
+# Use with caution, selected timetabling must support options below, which
+# currently only JavaTools does
+# ean_construction_target_model_headway; "LCM_REPRESENTATION"
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# --- default state for state-config ------------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ean_model_frequency; "FREQUENCY_AS_ATTRIBUTE"
+ean_model_change; "SIMPLE"
+ean_model_headway; "PRODUCT_OF_FREQUENCIES"
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# --- not modified by programs (i.e. not part of state-config) ----------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# timetabling should discard unused activities by itsself
+# for iterative or odpesp methods set this to false
+ean_discard_unused_change_activities; false
+# do not modify, is controlled by debug_paths_in_ean
+ean_remember_od_paths; false
+ean_change_penalty; 5
+ean_intermodal_change_penalty; 40
+ean_nonscheduled_penalty; 20
+# =!!!LOCAL_ONLY!!!= # period_length; 60
+# =!!!LOCAL_ONLY!!!= # time_units_per_minute; 1
+# =!!!LOCAL_ONLY!!!= # ean_default_minimal_waiting_time; 1
+# =!!!LOCAL_ONLY!!!= # ean_default_maximal_waiting_time; 3
+# =!!!LOCAL_ONLY!!!= # ean_default_minimal_change_time; 3
+# =!!!LOCAL_ONLY!!!= # ean_default_maximal_change_time; 62
+ean_individual_station_limits; false
+ean_model_weight_drive; "AVERAGE_DRIVING_TIME"
+# ean_model_weight_drive; "MINIMAL_DRIVING_TIME"
+# ean_model_weight_drive; "MAXIMAL_DRIVING_TIME"
+# ean_model_weight_drive; "EDGE_LENGTH"
+# ean_model_weight_change; "FORMULA_1"
+# ean_model_weight_change; "FORMULA_2"
+ean_model_weight_change; "FORMULA_3"
+# ean_model_weight_change; "MINIMAL_CHANGING_TIME"
+# ean_model_weight_wait; "MINIMAL_WAITING_TIME"
+ean_model_weight_wait; "AVERAGE_WAITING_TIME"
+# ean_model_weight_wait; "MAXIMAL_WAITING_TIME"
+# ean_model_weight_wait; "ZERO_COST"
+ean_complete_change_activities_before_reroute; true
+ean_initial_duration_assumption_model; "AUTOMATIC"
+#ean_initial_duration_assumption_model; "SEMI_AUTOMATIC"
+ean_dump_initial_duration_assumption; false
+ean_algorithm_shortest_paths; "FIBONACCI_HEAP"
+# ean_algorithm_shortest_paths; "TREE_MAP_QUEUE_RANDOMIZED"
+# ean_algorithm_shortest_paths; "TREE_MAP_QUEUE"
+# ean_algorithm_shortest_paths; "BELLMAN_FORD"
+ean_eval_extended; false
+ean_respect_change_stations; false
+ean_use_walking; false
+ean_max_nonscheduled_transfer_length; 10
+ean_multimodal_distribute_passengers_with_timetable; false
+#
+# -----------------------------------------------------------------------------
+# === ORIGIN DESTINATION MATRIX (od_*) ========================================
+# -----------------------------------------------------------------------------
+od_values_integral; true
+od_noise_level; 0.2
+od_network_acceleration; 5
+od_use_network_distance; true
+od_draw_conversion_factor; 1
+od_visualization_use_heatmap; false
+od_visualization_lower_bound; 0
+od_visualization_upper_bound; 1
+od_visualization_use_log_scale; false
+od_visualization_use_edge_color; false
+od_visualization_max_edge_width; 3
+od_visualization_use_annotations; false
+od_remove_uncovered_demand_points; true
+od_solver_type; GUROBI
+od_node_write_assignment; false
+od_default_value; 0
+#
+# -----------------------------------------------------------------------------
+# === LINE CONCEPT (lc_*) =====================================================
+# -----------------------------------------------------------------------------
+lc_init_bus_price; 1
+lc_changetime; 4
+lc_cuttingdown_size; 3
+lc_budget; 50000
+#lc_model; "cost_greedy_1"
+#lc_model; "cost_greedy_2"
+lc_model; "cost"
+#lc_model; "cost_restricting_frequencies"
+#lc_model; "game"
+#lc_model; "direct"
+#lc_model; "direct_restricting_frequencies"
+#lc_model; "direct_relaxation"
+#lc_model; "traveling-time-mip"
+#lc_model; "traveling-time-cg"
+#lc_model; "mult-cost-direct"
+#lc_model; "mult-cost-direct-relax"
+#lc_model; "minchanges_ip"
+#lc_model; "minchanges_cg"
+#lc_model; "cost-od-routing"
+lc_direct_optimize_costs; false
+lc_number_of_possible_frequencies; 2
+lc_timelimit; -1 # (-1 = no restriction)
+lc_mip_gap; -1 # (-1 = no restriction)
+lc_threads; -1 # (-1 = no restriction)
+lc_respect_fixed_lines; false
+lc_respect_forbidden_edges; false
+lc_maximal_frequency; 10
+lc_minimal_global_frequency; 0
+lc_common_frequency_divisor; 1
+lc_evaluate_lpool_average_traveling_time_lower_bound; false
+lc_mult_relation; 0.5
+lc_mult_cap_restrict; false
+lc_mult_tolerance; 0.001
+lc_c&g_include_departure_adaption_time; false
+lc_c&g_include_arrival_adaption_time; false
+lc_eval_extended; false
+lc_traveling_time_mip_minimize; "time"
+# lc_traveling_time_mip_minimize; "cost"
+# =!!!LOCAL_ONLY!!!= lc_traveling_time_mip_time_budget; 57140
+lc_traveling_time_mip_use_loads; true
+lc_traveling_time_mip_integer_flows; true
+lc_traveling_time_mip_integer_frequencies; true
+lc_traveling_time_cg_constraint_type; 1
+lc_traveling_time_cg_relaxation_constraint; true
+lc_traveling_time_cg_cover; true
+lc_traveling_time_cg_k_shortest_paths; 2
+lc_traveling_time_cg_add_sol_1; false
+lc_traveling_time_cg_add_sol_1_name; "line-planning/CostH7.giv"
+lc_traveling_time_cg_add_sol_2;false
+lc_traveling_time_cg_add_sol_2_name; "line-planning/CostH7.giv"
+lc_traveling_time_cg_add_sol_3; false
+lc_traveling_time_cg_add_sol_3_name; "line-planning/Direct.giv"
+lc_traveling_time_cg_max_iterations; 1000
+lc_traveling_time_cg_termination_value; 0.0001
+lc_traveling_time_cg_weight_od_edge;40
+lc_traveling_time_cg_solve_ip; true
+lc_traveling_time_cg_print_paths; false
+lc_traveling_time_cg_print_path_variables; false
+lc_minchanges_nr_ptn_paths; 10
+lc_minchanges_nr_cg_paths_per_ptn_path; 10
+lc_minchanges_cg_var_per_it; 50000
+lc_minchanges_max_reduced_costs_included_IP; 5
+lc_minchanges_xpress_logfile; xpress.log
+lc_minchanges_max_num_edges; 100
+lc_minchanges_pricing_method; "heuristic"
+#lc_minchanges_pricing_method; "exact"
+lc_minchanges_nr_max_changes; 5
+lc_verbose; false
+lc_solver; GUROBI
+#lc_solver; XPRESS
+#lc_solver; CPLEX
+#lc_solver; SCIP
+#lc_solver; GLPK
+#lc_solver; CBC
+#lc_solver; COPT
+#lc_solver; HIGHS
+#lc_solver; MOSEK
+lc_cost_od_use_start_solution; false
+lc_write_lp_file; false
+lc_draw_colored; true
+#
+# -----------------------------------------------------------------------------
+# === RIDEPOOLING CONCEPT (rc_*) ==============================================
+# -----------------------------------------------------------------------------
+rc_model; cost
+#rc_model; cost-beta
+rc_read_stretch_factors; false
+rc_timelimit; -1 # (-1 = no restriction)
+rc_mip_gap; -1 # (-1 = no restriction)
+rc_threads; -1 # (-1 = no restriction)
+rc_solver; GUROBI
+#rc_solver; XPRESS
+#rc_solver; CPLEX
+#rc_solver; SCIP
+#rc_solver; GLPK
+#rc_solver; CBC
+#rc_solver; COPT
+#rc_solver; HIGHS
+#rc_solver; MOSEK
+rc_write_lp_file; false
+rc_draw_colored; true
+rc_draw_coordinate_factor; 1
+rc_rp_percentage_draw_coordinate_factor; 1
+#
+# -----------------------------------------------------------------------------
+# === Multimodal Change&Go Network (mm_cg_*) ==================================
+# -----------------------------------------------------------------------------
+mm_cg_create_intramodal_transfer_arcs; false
+mm_cg_create_intermodal_transfer_arcs; false
+mm_cg_create_all_transfer_arcs; false
+mm_cg_intramodal_transfer_time; 5
+mm_cg_intermodal_transfer_time; 40
+mm_cg_intramodal_transfer_penalty; 5
+mm_cg_intermodal_transfer_penalty; 5
+mm_cg_rp_detour_factor; 1
+# mm_cg_model_drive; "MINIMAL_DRIVING_TIME"
+mm_cg_model_drive; "AVERAGE_DRIVING_TIME"
+# mm_cg_model_drive; "MAXIMAL_DRIVING_TIME"
+# mm_cg_model_drive; "EDGE_LENGTH"
+# mm_cg_model_wait; "MINIMAL_WAITING_TIME"
+mm_cg_model_wait; "AVERAGE_WAITING_TIME"
+# mm_cg_model_wait; "MAXIMAL_WAITING_TIME"
+# mm_cg_model_wait; "ZERO_COST"
+mm_cg_minimal_waiting_time; 1
+mm_cg_maximal_waiting_time; 3
+# mm_cg_model_intramodal_change; "TRANSFER_TIME"
+# mm_cg_model_intramodal_change; "FORMULA_1"
+# mm_cg_model_intramodal_change; "FORMULA_2"
+mm_cg_model_intramodal_change; "FORMULA_3"
+# mm_cg_model_intermodal_change; "TRANSFER_TIME"
+# mm_cg_model_intermodal_change; "FORMULA_1"
+# mm_cg_model_intermodal_change; "FORMULA_2"
+mm_cg_model_intermodal_change; "FORMULA_3"
+#
+# -----------------------------------------------------------------------------
+# === MULTIMODAL CONCEPTS (mm_lc_rc_*) ========================================
+# -----------------------------------------------------------------------------
+# mm_lc_rc_model; "cost"
+# mm_lc_rc_model; "cost-beta"
+mm_lc_rc_model; "mm-travel-time-mip"
+mm_lc_rc_cg_budget; -1 # (-1 = no restriction)
+mm_lc_rc_cg_flow_vars_type; continuous
+# mm_lc_rc_cg_flow_vars_type; integer
+mm_lc_rc_cg_write_statistic; true
+mm_lc_rc_cg_use_start_solution; false # set frequencies and vehicle counts as solver start solution (if they exist)
+mm_lc_rc_cg_minimize_cost; false # if false then time is minimized
+mm_lc_rc_cg_time_budget; -1 # (-1 = no restriction)
+mm_lc_rc_cg_write_loads; false
+mm_lc_rc_cg_respect_infrastructure_capacity; false
+mm_lc_rc_evaluation_extended; false
+mm_lc_rc_solver; GUROBI
+# mm_lc_rc_solver; XPRESS
+# mm_lc_rc_solver; CPLEX
+# mm_lc_rc_solver; SCIP
+# mm_lc_rc_solver; GLPK
+# mm_lc_rc_solver; CBC
+# mm_lc_rc_solver; COPT
+# mm_lc_rc_solver; HIGHS
+# mm_lc_rc_solver; MOSEK
+mm_lc_rc_write_lp_file; false
+mm_lc_rc_timelimit; -1 # (-1 = no restriction)
+mm_lc_rc_mip_gap; -1 # (-1 = no restriction)
+mm_lc_rc_threads; -1 # (-1 = no restriction)
+#
+# -----------------------------------------------------------------------------
+# === TIMETABLE (tim_*) =======================================================
+# -----------------------------------------------------------------------------
+tim_concept; periodic
+# tim_concept; aperiodic
+tim_eval_periodic; true
+tim_eval_extended; false
+tim_cap_eval; false
+tim_cap_eval_tt; false
+tim_cap_eval_accumulate_on_links; false
+tim_cap_eval_integer_flow; true
+tim_eval_walking; false
+tim_eval_walking_write_perceived_traveltime_file; false
+tim_eval_walking_add_changes; false
+tim_solver; GUROBI
+#tim_solver; XPRESS
+#tim_solver; CPLEX
+#tim_solver; SCIP
+#tim_solver; GLPK
+#tim_solver; CBC
+#tim_solver; COPT
+#tim_solver; HIGHS
+#tim_solver; MOSEK
+tim_timelimit; -1 # (-1 = no restriction)
+tim_mip_gap; -1 # (-1 = no restriction)
+tim_write_lp_file; false
+tim_threads; -1 # (-1 = no restriction)
+# tim_linear_model will affect tim_model javatools only
+# Only tim_model; "javatools" has support for selecting the linear model
+# cpf: javatools default. Support for cplex, gurobi and xpress
+tim_linear_model; "cpf"
+# epesp: takes modulo parameters from old timetable, needs
+# ean_model_headway LCM_REPRESENTATION, ean_model_change LCM_SIMPLIFICATION
+# and tim_solver cplex
+#tim_linear_model; "epesp"
+tim_cyclebase_model; "unexplored_vertices"
+#tim_cyclebase_model; "msf_fundamental_improvement"
+#tim_model; "ns_improve"
+#tim_model; "con_prop"
+# "csp" and "csp_ns" are currently not in the release version
+#tim_model; "csp"
+#tim_model; "csp_ns"
+#tim_model; "javatools"
+#tim_model; "con_ns"
+#tim_model; "matching"
+#tim_model; rptts
+#tim_model; ip
+#tim_model; "cb_ip"
+#tim_model; "phase-one"
+#tim_model; "ns_cb"
+tim_model; MATCH
+tim_passenger_threshold; 1.0
+tim_use_old_solution; false
+tim_fix_old_modulo; false
+tim_respect_fixed_times; false
+match-weight; "w3"
+#match-weight; "w1"
+#match-weight; "w2"
+line-matching; "greedy"
+#line-matching; "matchgreedy"
+#line-matching; "matchperfect"
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# --- ODPESP timetabling (tim_odpesp_*) ---------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+tim_odpesp_use_old_timetable; false
+tim_odpesp_use_old_passenger_paths; false
+# cplex is the only choice at the moment
+tim_odpesp_solver; "Cplex"
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# --- Network Simplex (tim_nws_*) ---------------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# headway usage
+tim_nws_headways; true
+# local methods
+#tim_nws_loc_search; "SINGLE_NODE_CUT"
+#tim_nws_loc_search; "RANDOM_CUT"
+#tim_nws_loc_search; "WAITING_CUT"
+tim_nws_loc_search; "CONNECTED_CUT"
+# fundamental methods
+#tim_nws_tab_search; "TAB_FULL"
+#tim_nws_tab_search; "TAB_SIMPLE_TABU_SEARCH"
+#tim_nws_tab_search; "TAB_SIMULATED_ANNEALING"
+#tim_nws_tab_search; "TAB_STEEPEST_SA_HYBRID"
+tim_nws_tab_search; "TAB_PERCENTAGE"
+#tim_nws_tab_search; "TAB_FASTEST"
+# parameters
+tim_nws_ts_memory; 40
+tim_nws_ts_max_iterations; 150
+tim_nws_pivot_count_max_iterations; 100
+tim_nws_loc_number_of_nodes; 10
+tim_nws_sa_init; 50000
+tim_nws_sa_cooldown; 0.95
+tim_nws_percentage; 80
+tim_nws_min_pivot; 0.1
+tim_nws_dyn_pivot; 0.5
+# gurobi thread = 0 means gurobi can use all cores
+tim_nws_gurobi_threads; 0
+# random seed = 0 means no given seed.
+tim_nws_seed; 0
+#maximum iteration number = 0 means no limit.
+tim_nws_limit; 0
+# timelimit in seconds. = 0 means no limit.
+tim_nws_timelimit; 0
+tim_nws_use_robustness; false
+tim_nws_min_robustness; 0.0
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# --- Constraint Propagation (tim_cp_*) ---------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#tim_cp_sortmode; "UP"
+#tim_cp_sortmode; "DOWN"
+tim_cp_sortmode; "RANDOM"
+tim_cp_check_feasibility; false
+tim_cp_animate; false
+tim_cp_animate_directory; "graphics/cp_animation"
+# random seed = 0 means no given seed.
+tim_cp_seed; 0
+# in seconds. time limit = 0 means no given limit.
+tim_cp_time_limit; 0
+#
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# === PESP IP (tim_pesp_ip_*) -------------------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# only implemented for gurobi
+tim_pesp_ip_solution_limit; 0
+# only implemented for gurobi
+tim_pesp_ip_best_bound_stop; 0
+# see gurobi MIPFocus
+tim_pesp_ip_mip_focus; 0
+#
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# === PESP cycle base (tim_pesp_cb_*) -------------------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+tim_pesp_cb_solution_limit; 0
+# best bound = 0 means no given best bound stop.
+tim_pesp_cb_best_bound_stop; 0
+# see gurobi MIPFocus
+tim_pesp_cb_mip_focus; 0
+tim_pesp_cb_passenger_cut; 0
+#
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# === PESP Phase One (tim_phase_one_*) -------------------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+tim_phase_one_model; "cb_ip"
+tim_phase_one_extend_ean_model; "full"
+tim_phase_one_save_extended_ean; false
+tim_phase_one_save_extended_ean_dir; "default"
+# default dir is "timetabling/<date>_<time>_phase-one_extended-ean"
+#
+# -----------------------------------------------------------------------------
+# === LOAD GENERATOR (load_generator_*) =======================================
+# -----------------------------------------------------------------------------
+#load_generator_model; "LOAD_FROM_EAN"
+load_generator_model; "LOAD_FROM_PTN"
+#load_generator_model; "spanners"
+load_generator_lower_frequency_factor; 1.0
+load_generator_upper_frequency_factor; 1.75
+load_generator_fix_upper_frequency; true
+load_generator_fixed_upper_frequency; 20
+load_generator_type; SP
+#load_generator_type; REWARD
+#load_generator_type; REDUCTION
+load_generator_number_of_shortest_paths; 1
+load_generator_sp_distribution_factor; -0.1
+load_generator_max_iteration; 10
+load_generator_scaling_factor; 50
+load_generator_use_cg; false
+load_generator_min_change_time_factor; 4
+load_generator_add_additional_load; false
+load_generator_timelimit; 3600 # (-1 = no restriction)
+load_generator_mip_gap; -1 # (-1 = no restriction)
+load_generator_threads; 8 # (-1 = no restriction)
+load_generator_solver; "GUROBI"
+#load_generator_solver; "XPRESS"
+#load_generator_solver; "CPLEX"
+load_generator_write_lp_file; false
+# load_generator_detour_factor; "cons"
+# load_generator_detour_factor; "obj"
+load_generator_detour_factor; "none"
+# load_generator_travel_time; "cons"
+load_generator_travel_time; "obj"
+# load_generator_travel_time; "none"
+load_generator_building_cost; "cons"
+# load_generator_building_cost; "obj"
+# load_generator_building_cost; "none"
+load_generator_max_detour; 3.5
+load_generator_max_travel_time; 1000
+load_generator_max_building_cost; 100
+load_generator_gen_cuts; true
+load_generator_remove_unused_edges; false
+load_generator_write_multimodal_od_split; true
+#
+# -----------------------------------------------------------------------------
+# === Load Visualization ==============================================
+# -----------------------------------------------------------------------------
+loads_draw_conversion_factor; 1
+loads_graph_lower_bound; 0
+loads_graph_upper_bound; 1
+loads_graph_use_edge_color; true
+loads_graph_max_edge_width; 3
+loads_graph_use_log_scale; false
+#
+# -----------------------------------------------------------------------------
+# === DEBUGGING (debug_*) =====================================================
+# -----------------------------------------------------------------------------
+debug_paths_in_ptn; false
+debug_paths_in_ean; false
+allow_keylistener; false
+#
+# -----------------------------------------------------------------------------
+# === ROBUST ACTIVITES (rob_*)	============================================
+# -----------------------------------------------------------------------------
+#
+rob_buffer_generator; "exponential"
+#rob_buffer_generator; "reverse-exponential"
+#rob_buffer_generator; "uniform-random"
+#rob_buffer_generator; "exceed-random"
+#rob_buffer_generator; "proportional"
+#rob_buffer_generator; "proportional-restricted"
+rob_average_buffer_on_activity; 1
+rob_proportional_drive_activity_buffer; 0
+rob_buffer_on_wait_activity; 0
+rob_buffer_on_drive_activity; 0
+rob_relax_upper_bound; 10
+rob_lambda; 1
+rob_max_puffer_exc_rand; 5
+rob_buffer_drive; true
+rob_buffer_wait; true
+# 0 means no seed
+rob_buffer_seed; 0
+rob_buffer_link_list; ""
+rob_buffer_stop_percentage; 0
+rob_buffer_link_percentage; 0
+rob_ls_change_weight; 1
+rob_ls_drive_weight; 1
+rob_ls_wait_weight; 1
+rob_ls_turn_weight; 1
+rob_max_travel_time; 241
+rob_max_changes; 10
+rob_max_turnaround_time; 32
+rob_routing_start_time; 3600
+rob_routing_end_time; 1000000
+rob_ls_allowed_travel_time_increase; 1.1
+rob_ls_buffer_increase_per_step; 120
+rob_reroute_interval; 10
+rob_max_group_size; 1
+rob_max_iteration; 101
+rob_create_missing_changes; true
+rob_ls_candidates_per_type; 1
+rob_mip_gap; -1
+rob_timelimit; -1
+rob_threads; -1
+rob_debug_output_path; rob_ml_solutions
+rob_ls_propagate_slack_min_time; 300
+rob_ls_propagate_slack_percentage; 1
+rob_ls_propagate_slack_use_percentage; true
+rob_ls_use_periodic_timetabling; false
+rob_start_solutions_file; "start_solutions.zip"
+rob_ga_solution_pool_size; 5
+rob_ga_breedings_per_iteration; 5
+rob_ga_number_mutations_at_start; 100
+rob_ga_number_mutations_at_breeding; 100
+rob_ga_mutation_amount; 120
+rob_ga_number_start_solutions; 5
+rob_ga_seed; -1
+rob_ls_start_solution; -1
+rob_use_genetic_algorithm; false
+rob_ga_only_best_breeding; true
+rob_ga_selection; QUALITY
+#rob_ga_selection; PARETO
+rob_output_every_solution; false
+rob_use_api_for_prediction; false
+rob_use_single_ann_models; false
+rob_api_port; -1
+rob_ls_select_by_ratio; false
+#
+# -----------------------------------------------------------------------------
+# === ROLLOUT SETTINGS (rollout_*) ============================================
+# -----------------------------------------------------------------------------
+#
+rollout_whole_trips; false
+rollout_discard_unused_change_edges; true
+rollout_for_nonperiodic_timetabling; false
+rollout_passenger_paths; false
+#
+# -----------------------------------------------------------------------------
+# === Robustness-Check Parameter ==============================================
+# -----------------------------------------------------------------------------
+dm_robustness_iterations; 3
+#How many edges should be delayed
+dm_robustness_treeOnTrack_binomial; 0.5
+#Average deley (in seconds)
+dm_robustness_treeOnTrack_beta; 300
+#
+# -----------------------------------------------------------------------------
+# === DELAY GENERATOR SETTINGS (delays_*) =====================================
+# -----------------------------------------------------------------------------
+# delays_generator; "uniform_background_noise"
+delays_generator; "uniform_distribution"
+# --------------------------------------
+delays_events; false
+delays_activities; true
+#
+# delay generator: "events_in_station" events in some station
+# --------------------------------------
+#delays_generator; "events_in_station"
+delays_station_id_for_delays; -1
+#
+# delay generator: "activities_on_track" driving activities on some track
+# --------------------------------------
+#delays_generator; "activities_on_track"
+delays_edge_id_for_delays; -1
+#
+# generic delay generator settings for all methods
+# --------------------------------------
+# for random delay generation set seed, so results are reproduceable (seed=0, no seed)
+delays_seed; 0
+delays_count; 25
+delays_count_is_absolute; true
+delays_min_delay; 60
+delays_max_delay; 900
+delays_min_time; 28800
+delays_max_time; 43200
+# are delays_min_delay and delays_max_delay absolute or relative (in % w.r.t. the nominal activity duration)?
+delays_absolute_numbers; true
+# overwrite existing source delays, or add new source delays to existing ones?
+delays_append; false
+#
+# -----------------------------------------------------------------------------
+# === DELAY MANAGEMENT SETTINGS (DM_*) ========================================
+# -----------------------------------------------------------------------------
+#
+DM_eval_extended; false
+DM_passenger_routing_arrival_on_time; true
+DM_earliest_time; 28800
+DM_latest_time; 43200
+DM_lower_bound_reduction_factor; 1
+DM_method_prio_percentage; 0
+#DM_method; "DM1"
+#DM_method; "DM2"
+#DM_method; "DM2-pre"
+#DM_method; "FSFS"
+#DM_method; "FRFS"
+#DM_method; "EARLYFIX"
+#DM_method; "PRIORITY"
+#DM_method; "PRIOREPAIR"
+DM_method; "best-of-all"
+#DM_method; "propagate"
+#DM_method; "PASSENGERPRIOFIX"
+#DM_method; "PASSENGERFIX"
+#DM_method; "FIXFSFS"
+#DM_method; "FIXFRFS"
+DM_method_prio_percentage; 100
+DM_opt_method_for_heuristic; "DM2"
+DM_timelimit; -1 # (-1 = no restriction)
+DM_threads; -1 # (-1 = no restriction)
+DM_write_lp_file; false
+DM_mip_gap; -1 # (-1 = no restriction)
+DM_debug; false
+DM_verbose; true
+DM_enable_consistency_checks; true
+DM_solver; GUROBI
+#DM_solver; XPRESS
+# parameters for propagate method (no optimization)
+DM_propagate_maxwait; 300
+DM_propagate_swapHeadways; true
+DM_reuse_batch_delays; false
+DM_batch_delays_comment; testdirectory
+DM_best_of_all_write_objectives; false
+# DM_method; online-dm
+# Settings for publishing delay information in OnlineDM
+# if delays_known_before is true, delays bigger than delays_known_bigger_than are known from start
+delays_known_before; true
+delays_known_seed; 1
+delays_known_bigger_than; 600
+# Settings for heuristics for OnlineDM
+algo_RWT; "RWT_fixed"
+fixed_time; 300
+#algo_RWT; "RWT_slack"
+slack_relevant_edges; 3
+#algo_RWT; "RWT_slack_minimal_change"
+#algo_RWT; "none"
+algo_Passenger; "none"
+#algo_Passenger; "passenger_nextdrive"
+#algo_Passenger; "passenger_nextdrive_incoming"
+#algo_Passenger; "passenger_nextdrive_outgoing"
+critical_rate; 3
+algo_headway; "case_by_case"
+#algo_headway; "case_by_case_weighted"
+#
+# -----------------------------------------------------------------------------
+# === DELAY VISUALIZATION SETTINGS (dm_animation_delays_*) ============================
+# -----------------------------------------------------------------------------
+#
+dm_animation_delays_min_time; 28800
+dm_animation_delays_max_time; 43200
+dm_animation_delays_number_of_steps; 100
+dm_animation_delays_output_dir; "graphics/delay_animation"
+dm_animation_delays_passengers; true
+#
+# -----------------------------------------------------------------------------
+# === VEHICLE SCHEDULING ======================================================
+# -----------------------------------------------------------------------------
+#vs_model; MDM1
+#vs_model; MDM2
+#vs_model; ASSIGNMENT_MODEL
+#vs_model; TRANSPORTATION_MODEL
+#vs_model; NETWORK_FLOW_MODEL
+#vs_model; SINGLE_COMMODITY_MODEL
+#vs_model; CANAL_MODEL
+#vs_model; LINE_BASED
+#vs_model; SIMPLE
+vs_model; IP
+vs_solver; GUROBI
+#vs_solver; XPRESS
+#vs_solver; CPLEX
+#vs_solver; SCIP
+#vs_solver; GLPK
+#vs_solver; CBC
+#vs_solver; COPT
+#vs_solver; HIGHS
+#vs_solver; MOSEK
+vs_timelimit; -1 # (-1 = no restriction)
+vs_mip_gap; -1 # (-1 = no restriction)
+vs_threads; -1 # (-1 = no restriction)
+vs_write_lp_file; false
+vs_vehicle_costs; 100000
+vs_min_distance; 0
+vs_penalty_costs; 50000
+vs_depot_index; []
+vs_turn_over_time; 0
+vs_maximum_buffer_time; 20
+vs_line_based_method; 4
+vs_line_based_alpha; 0.3
+vs_line_based_solve_lp_relax; false
+vs_line_based_regard_frequencies; true
+vs_eval_cost_factor_empty_trips_length; 1.5
+vs_eval_cost_factor_empty_trips_duration; 25
+vs_eval_cost_factor_full_trips_length; 1.5
+vs_eval_cost_factor_full_trips_duration; 25
+vs_vehicle_number_upper_bound; 20
+vs_distances_rounding_places; 3
+#vs_vehicle_speed_level; slow
+#vs_vehicle_speed_level; average
+vs_vehicle_speed_level; fast
+#
+# -----------------------------------------------------------------------------
+# === TARIFF PLANNING =========================================================
+# -----------------------------------------------------------------------------
+taf_threads; -1 # (-1 = no restriction)
+taf_mip_gap; -1 # (-1 = no restriction)
+taf_timelimit; -1 # (-1 = no restriction)
+taf_solver; GUROBI
+#taf_solver; XPRESS
+#taf_solver; CPLEX
+#taf_solver; SCIP
+#taf_solver; CBC
+#taf_solver; GLPK
+#taf_solver; COPT
+#taf_solver; HIGHS
+#taf_solver; MOSEK
+taf_write_lp_file; false
+#taf_model; ZONE
+taf_model; BEELINE_DISTANCE
+#taf_model; NETWORK_DISTANCE
+#taf_model; FLAT
+taf_routing_generation; FASTEST-PATHS
+#taf_routing_generation; READ-ALL
+#taf_routing_generation; READ-PARTIAL-FILL
+taf_objective; SUM_ABSOLUTE_DEVIATION
+#taf_objective; MAX_ABSOLUTE_DEVIATION
+taf_weights_objective; OD
+#taf_weights_objective; UNIT
+#taf_weights_objective; REFERENCE_INVERSE
+taf_zone_n_zones; 5
+taf_zone_enforce_all_zones; false
+taf_zone_connected; true
+taf_zone_counting; SINGLE
+#taf_zone_counting; MULTIPLE
+taf_zone_symmetry_breaking; A
+#taf_zone_symmetry_breaking; B
+#taf_zone_symmetry_breaking; NONE
+taf_zone_enforce_no_elongation; false
+taf_zone_enforce_no_stopover; false
+taf_zone_only_zones; false
+taf_zone_only_prices; false
+taf_evaluate_old_prices; basis/Reference-Price-Matrix.giv
+taf_evaluate_new_prices; tariff/Price-Matrix.taf
+taf_draw_heatmap; true
+taf_heatmap_mode; OLD
+#taf_heatmap_mode; NEW
+#taf_heatmap_mode; COMPARE
+taf_heatmap_log_scale; false
+taf_heatmap_use_annotations; false
+taf_draw_zones; false
+taf_flat_price; 3
+taf_fixed_costs; 1.5
+taf_factor_costs; 0.2
+#
+# -----------------------------------------------------------------------------
+# === INTEGRATED MODELS =======================================================
+# -----------------------------------------------------------------------------
+# COMMONS
+int_threads; 4
+int_factor_travel_time; 1
+int_factor_drive_time; 0
+int_factor_transfer_time; 0
+int_factor_wait_time; 0
+int_factor_penalty_time_slice; 2
+int_time_slices; 1
+int_number_of_periods; 4
+int_restrict_to_system_frequency; true
+int_system_frequency; 1
+int_check_lower_frequencies; false
+int_check_upper_frequencies; true
+int_set_starting_timetable; false
+int_solver; GUROBI
+#int_solver; XPRESS
+#int_solver; CPLEX
+#int_solver; SCIP
+#int_solver; GLPK
+#int_solver; CBC
+#int_solver; COPT
+#int_solver; HIGHS
+#int_solver; MOSEK
+# TIM_PASS
+tim_pass_use_preprocessing; true
+tim_pass_use_cycle_base; true
+tim_pass_restrict_transfer_stations; false
+tim_pass_add_fixed_passenger_paths; true
+tim_pass_number_of_routed_od_pairs; -1
+tim_pass_choose_routed_od_pairs; POTENTIAL
+#tim_pass_choose_routed_od_pairs; LARGEST_WEIGHT
+#tim_pass_choose_routed_od_pairs; SMALLEST_WEIGHT
+#tim_pass_choose_routed_od_pairs; LARGEST_WEIGHT_WITH_TRANSFER
+#tim_pass_choose_routed_od_pairs; LARGEST_DISTANCE
+#tim_pass_choose_routed_od_pairs; DIFF
+#tim_pass_choose_routed_od_pairs; RANDOM
+tim_pass_timelimit; 3600
+tim_pass_mip_gap; -1
+tim_pass_write_lp_file; false
+# LIN_TIM_PASS
+lin_tim_pass_use_preprocessing; true
+lin_tim_pass_add_fixed_passenger_paths; true
+lin_tim_pass_number_of_routed_od_pairs; -1
+lin_tim_pass_factor_line_cost; 1
+lin_tim_pass_timelimit; 3600
+lin_tim_pass_mip_gap; -1
+lin_tim_pass_write_lp_file; false
+lin_tim_pass_choose_routed_od_pairs; LARGEST_WEIGHT
+#lin_tim_pass_choose_routed_od_pairs; SMALLEST_WEIGHT
+#lin_tim_pass_choose_routed_od_pairs; LARGEST_DISTANCE
+#lin_tim_pass_choose_routed_od_pairs; RANDOM
+# TIM_VEH
+tim_veh_allow_empty_trips; true
+tim_veh_use_lower_bound; true
+tim_veh_timelimit; 3600
+tim_veh_mip_gap; -1
+tim_veh_write_lp_file; false
+# LIN_TIM_PASS_VEH
+lin_tim_pass_veh_use_preprocessing; true
+lin_tim_pass_veh_add_fixed_passenger_paths; true
+lin_tim_pass_veh_number_of_routed_od_pairs; -1
+lin_tim_pass_veh_timelimit; 3600
+lin_tim_pass_veh_mip_gap; -1
+lin_tim_pass_veh_write_lp_file; false
+lin_tim_pass_veh_allow_empty_trips; true
+lin_tim_pass_veh_choose_routed_od_pairs; LARGEST_WEIGHT
+#lin_tim_pass_veh_choose_routed_od_pairs; SMALLEST_WEIGHT
+#lin_tim_pass_veh_choose_routed_od_pairs; LARGEST_DISTANCE
+#lin_tim_pass_veh_choose_routed_od_pairs; RANDOM
+# Eigenmodel
+# =!!!LOCAL_ONLY!!!= # DM_earliest_time_EM; 32400
+# =!!!LOCAL_ONLY!!!= # DM_latest_time_EM; 36000
+# LIN_VEH_TO_TIM
+lin_veh_to_tim_timelimit; 3600
+lin_veh_to_tim_mip_gap; -1
+lin_veh_to_tim_write_lp_file; false
+#
+# -----------------------------------------------------------------------------
+# === VISUM ===================================================================
+# -----------------------------------------------------------------------------
+visum_respect_nodes_when_reading_ptn; false
+visum_tsyscode; B
+visum_hour_to_consider; 8
+visum_read_forbidden_edges; false
+# -----------------------------------------------------------------------------
+# === GUI SETTINGS ============================================================
+# -----------------------------------------------------------------------------
+#mapgui_show_step; "ptn"
+#mapgui_show_step; "linepool"
+#mapgui_show_step; "lineconcept"
+#mapgui_show_step; "timetable"
+mapgui_show_step; "dispotimetable"
+mapgui_visual_speed; 10
+# -----------------------------------------------------------------------------
+# === TimPassLib ==============================================================
+# -----------------------------------------------------------------------------
+header_timpasslib_activities; "activity_index;type;from_event;to_event;lower_bound;upper_bound"
+timpasslib_export_timetable; "true"
+timpasslib_import_timetable; "false"
+#
+# -----------------------------------------------------------------------------
+# === DATASET GENERATOR (dg_*) ================================================
+# -----------------------------------------------------------------------------
+dg_model; "parametrized_city"
+#dg_model; "ring"
+#dg_model; "crop"
+dg_param_city_alpha; 0.25
+dg_param_city_beta; 0.22
+dg_param_city_number_subcenters; 7
+dg_param_city_eta; 0
+dg_param_city_Y; 2565622
+dg_param_city_L; 10
+dg_param_city_g; 0.85
+dg_param_city_a; 0.78
+dg_ring_number_of_rings; 1
+dg_ring_nodes_per_ring; 10
+dg_ring_length_1; false
+dg_ring_radius; 10
+dg_ring_demand_type; "UNIFORM"
+#dg_ring_demand_type; "UNIFORM_CENTRE"
+#dg_ring_demand_type; "RANDOM"
+#dg_ring_demand_type; "RANDOM_NEIGHBOUR_CENTRE"
+#dg_ring_demand_type; "SPOKE_RING"
+dg_ring_spoke_edge_demand; 1
+dg_ring_ring_edge_demand; 1
+dg_ring_demand_scaling_factor; 1
+dg_dataset_to_crop; "dataset-name"
+dg_crop_norm; "maximum"
+# dg_crop_norm; "euclidean"
+dg_crop_center_id; 1
+dg_crop_radius; 5000
+dg_crop_is_multimodal; true
+dg_crop_modalities; []
+# -----------------------------------------------------------------------------
+# === OPTIMIZED VISUALIZATION  ================================================
+# -----------------------------------------------------------------------------
+# max time to spend on optimization
+lpool_opt_visualisation_max_opt_time; 120
+# if true, merges lines as specified in line-planning/Merge-Lines.giv
+lpool_opt_visualisation_merge_lines; false
+# if true, draws line thickness depending on frequency of line
+lpool_opt_visualisation_draw_frequency; false
+# the scale of the plotted image
+lpool_opt_visualisation_plot_scale; 1
+lpool_opt_visualisation_plot_margins; 0.1
+# whether or not a background (in white) gets plotted
+lpool_opt_visualisation_background; false
+lpool_opt_visualisation_line_distance; 2
+lpool_opt_visualisation_line_width; 5
+lpool_opt_visualisation_draw_legend; true
+# the scale of the legend in plotted image
+lpool_opt_visualisation_legend_scaling; 0.7
+# location of legend (best, upper/center/lower right/center/left)
+lpool_opt_visualisation_legend_location; best
+# if true, scales nodes depending on number of lines they have
+lpool_opt_visualisation_scale_nodes; true
+lpool_opt_visualisation_node_scaling; 1.001
+# min size when scaling is on
+lpool_opt_visualisation_min_node_size; 50
+# size for nodes when scaling is off
+lpool_opt_visualisation_def_node_size; 500
+lpool_opt_visualisation_node_labels; true
+# font size of node labels
+lpool_opt_visualisation_node_label_size; 10
+# if true, will use file in case it is found
+lpool_opt_visualisation_use_color_file; false
+lpool_opt_visualisation_create_color_file_for_line_pool; true
+lpool_opt_visualisation_number_colors_in_color_file; 20
+lpool_opt_visualisation_colormap_in_color_file; "rainbow"
+#lpool_opt_visualisation_colormap_in_color_file; "gist_ncar"
+#lpool_opt_visualisation_colormap_in_color_file; "greys"
+lpool_opt_visualisation_use_name_file; false
+lpool_opt_visualisation_highlight_lines; false
+# multimodal
+lpool_opt_visualisation_same_color_modality; false
+# display line frequencies in legend
+lpool_opt_visualisation_display_frequency; true

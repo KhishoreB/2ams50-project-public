@@ -1,0 +1,48 @@
+setting-name; setting-value
+include; "../../Global-Config.cnf"
+# ===========================================================================
+# === LOCAL_ONLY from Global-Config.cnf =====================================
+# ===========================================================================
+ptn_name; "toy"
+period_length; 60
+time_units_per_minute; 1
+ptn_stop_waiting_time; 1
+ptn_draw_conversion_factor; 0.1
+loads_draw_conversion_factor; 1
+od_draw_conversion_factor; 1
+lpool_coordinate_factor; 1
+# speed of the vehicles in km/h
+gen_vehicle_speed; 180
+gen_conversion_length; 12
+gen_conversion_coordinates; 0.12
+ean_change_penalty; 5
+ean_default_minimal_waiting_time; 1
+ean_default_maximal_waiting_time; 3
+ean_default_minimal_change_time; 3
+ean_default_maximal_change_time; 62
+# interpolated from Load.giv.nominal
+gen_passengers_per_vehicle; 70
+od_nominal_overall_directed_load; 4600
+# ===========================================================================
+# === Network Specific Settings =============================================
+# ===========================================================================
+odptn_missing_values; "GLOBAL_MEAN_VALUE"
+lpool_evaluate_average_traveling_time_lower_bound; true
+# ===========================================================================
+# === Optimized Visualization  ==============================================
+# ===========================================================================
+lpool_opt_visualisation_plot_scale; 2
+lpool_opt_visualisation_plot_margins; 0.2
+lpool_opt_visualisation_line_distance; 1
+lpool_opt_visualisation_line_width; 4
+lpool_opt_visualisation_legend_scaling; 0.7
+lpool_opt_visualisation_legend_location; best
+lpool_opt_visualisation_def_node_size; 700
+lpool_opt_visualisation_node_labels; true
+lpool_opt_visualisation_node_label_size; 10
+# ===========================================================================
+# === State / Experiments / Automatization ==================================
+# ===========================================================================
+include_if_exists; "State-Config.cnf"
+include_if_exists; "Private-Config.cnf"
+include_if_exists; "After-Config.cnf"

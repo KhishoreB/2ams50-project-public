@@ -1,0 +1,13 @@
+# ignore pychache
+__pycache__/
+# ignore virtual environment
+venv/
+# ignore python egg files
+*.egg
+# ignore python egg info
+*.egg-info/
+# ignore distribution files
+dist/
+# ignore build files
+build/
+test.ipynb
