@@ -1,0 +1,672 @@
+{
+  "metric": "uncapacitated_direct_demand_coverage",
+  "constraint_policy": "uploaded_utils.effective_frequency_bounds",
+  "lp": {
+    "status": "optimal",
+    "frequencies": {
+      "2": 3.0,
+      "3": 2.0,
+      "4": 4.0,
+      "5": 1.0,
+      "6": 1.0,
+      "8": 3.0
+    },
+    "cost_lower_bound": 703.8000000000001,
+    "runtime_seconds": 0.012830761000259372,
+    "solver": "gurobi"
+  },
+  "records": [
+    {
+      "dataset": "toy",
+      "method": "greedy",
+      "budget": 703.8,
+      "raw": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00043706900032702833,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "best_feasible": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00043706900032702833,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "selected_from_budget": 703.8,
+      "carried_forward": false
+    },
+    {
+      "dataset": "toy",
+      "method": "greedy",
+      "budget": 879.75,
+      "raw": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.0004214750006212853,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "best_feasible": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00043706900032702833,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "selected_from_budget": 703.8,
+      "carried_forward": true
+    },
+    {
+      "dataset": "toy",
+      "method": "greedy",
+      "budget": 1055.6999999999998,
+      "raw": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00032760399972175946,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "best_feasible": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00043706900032702833,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "selected_from_budget": 703.8,
+      "carried_forward": true
+    },
+    {
+      "dataset": "toy",
+      "method": "greedy",
+      "budget": 1407.6,
+      "raw": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.0004157569992457866,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "best_feasible": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00043706900032702833,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "selected_from_budget": 703.8,
+      "carried_forward": true
+    },
+    {
+      "dataset": "toy",
+      "method": "lp_rounding",
+      "budget": 703.8,
+      "raw": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00017000600018945988,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 703.8000000000001,
+          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "best_feasible": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00017000600018945988,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 703.8000000000001,
+          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "selected_from_budget": 703.8,
+      "carried_forward": false
+    },
+    {
+      "dataset": "toy",
+      "method": "lp_rounding",
+      "budget": 879.75,
+      "raw": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.0002304479994563735,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 703.8000000000001,
+          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "best_feasible": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00017000600018945988,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 703.8000000000001,
+          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "selected_from_budget": 703.8,
+      "carried_forward": true
+    },
+    {
+      "dataset": "toy",
+      "method": "lp_rounding",
+      "budget": 1055.6999999999998,
+      "raw": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.0003319709994684672,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 703.8000000000001,
+          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "best_feasible": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00017000600018945988,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 703.8000000000001,
+          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "selected_from_budget": 703.8,
+      "carried_forward": true
+    },
+    {
+      "dataset": "toy",
+      "method": "lp_rounding",
+      "budget": 1407.6,
+      "raw": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.000300071999845386,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 703.8000000000001,
+          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "best_feasible": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "2": 3,
+          "3": 2,
+          "4": 4,
+          "5": 1,
+          "6": 1,
+          "8": 3
+        },
+        "cost": 703.8,
+        "direct_demand_coverage": 2280.0,
+        "coverage_percentage": 86.95652173913044,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.00017000600018945988,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 703.8000000000001,
+          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "selected_from_budget": 703.8,
+      "carried_forward": true
+    }
+  ],
+  "dataset": "toy",
+  "pool": [
+    {
+      "id": 1,
+      "edges": [
+        1,
+        6,
+        7
+      ],
+      "length": 3.0,
+      "cost": 50.3,
+      "nodes": [
+        1,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "id": 2,
+      "edges": [
+        2,
+        6,
+        8
+      ],
+      "length": 3.0,
+      "cost": 50.3,
+      "nodes": [
+        2,
+        3,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 3,
+      "edges": [
+        5
+      ],
+      "length": 0.8,
+      "cost": 50.089999999999996,
+      "nodes": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 4,
+      "edges": [
+        6,
+        5
+      ],
+      "length": 1.8,
+      "cost": 50.190000000000005,
+      "nodes": [
+        3,
+        6,
+        5
+      ]
+    },
+    {
+      "id": 5,
+      "edges": [
+        2,
+        3
+      ],
+      "length": 2.0,
+      "cost": 50.2,
+      "nodes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "edges": [
+        4,
+        5,
+        6
+      ],
+      "length": 2.8,
+      "cost": 50.29,
+      "nodes": [
+        4,
+        5,
+        6,
+        3
+      ]
+    },
+    {
+      "id": 7,
+      "edges": [
+        3,
+        4,
+        5
+      ],
+      "length": 2.8,
+      "cost": 50.29,
+      "nodes": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "edges": [
+        1,
+        3,
+        4,
+        5,
+        7
+      ],
+      "length": 4.8,
+      "cost": 50.49,
+      "nodes": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "input_audit": {
+    "frequency_inputs_verified_for_shared_helper": true,
+    "legacy_diagnostic": false,
+    "issues": []
+  },
+  "pool_generation_seconds": 0.00013812799988954794,
+  "reference": null,
+  "reference_kind": "user_supplied_reference_cost",
+  "vehicle_capacity": 70,
+  "capacity_load_mismatches": [],
+  "cost_parameters": {
+    "fixed_per_frequency": 50.0,
+    "per_length": 0.05,
+    "per_edge": 0.05
+  },
+  "effective_frequency_bounds": {
+    "1": [
+      3,
+      20
+    ],
+    "2": [
+      4,
+      20
+    ],
+    "3": [
+      3,
+      20
+    ],
+    "4": [
+      4,
+      20
+    ],
+    "5": [
+      10,
+      20
+    ],
+    "6": [
+      8,
+      20
+    ],
+    "7": [
+      3,
+      20
+    ],
+    "8": [
+      3,
+      20
+    ]
+  },
+  "input_sha256": {
+    "Global-Config.cnf": "25c8402e6de34f3de57c2030e98747ca6a631df9acca39f1927bf2de354397f0",
+    "toy/basis/Config.cnf": "b1a41fef1f508f99f103643b307f4b376912655d347c612320e2dc31a5dcfe73",
+    "toy/basis/Edge.giv": "35ac3ae200c3960f13ac932dc1740bac8c7f8ab512adcc458c815ecab4323997",
+    "toy/basis/Load.giv": "ad974e747488372b8cf5167dc7889ae5e039dbc492477831268acfdd638fdf21",
+    "toy/basis/OD.giv": "e31cc5ea5167a154431d1d6f333091b12bc95140b98c9265cd009f87b314d53c",
+    "toy/basis/Pool-Cost.giv": "33024507c8833e5ddbfa020463b37271320a010f346fc10e02628c9b0802549e",
+    "toy/basis/Pool.giv": "3274ca573f75e170a332def7fd84c3875444225d179c9880e15256adbfc4eed3",
+    "toy/basis/Stop.giv": "cbe006e1f4e088848fa4c40005557998f4ec493a8f266c468a8c385028c21d07"
+  },
+  "source_sha256": {
+    "src/__init__.py": "dd51043ef7933d36c1ff9300f93a1864bfc3e6156b1a7ba195dda505032ba86b",
+    "src/heuristics/__init__.py": "b9b6ca9a2e521679cc3e4dedaa78f4b4eb4ebb2356ccd282c23e839afb4739d0",
+    "src/heuristics/budget_sweep.py": "450bcd71f995322e0d72e5b13fe00382c40dfda04dab8899d050db38a366bfbe",
+    "src/heuristics/greedy_pool.py": "86e86a6747c77d8e549d0f9c01bb293b08e31ba16325bcc55e431706142d2d84",
+    "src/heuristics/input_audit.py": "dddbec6817f496efce14940b1cddd717ce9382ae5f5b361c182e134ecdadc727",
+    "src/heuristics/lp_rounding.py": "86eb3efc81005029c1a4f3eee978e6bcb3981b59ac67badb36e4826212629b25",
+    "src/models/__init__.py": "6b617979403756928c7738bed5546e88624f8717c8bd9da31357bf6f89f7cf3b",
+    "src/models/column_generation.py": "c0c60d844c5a89470e783f398efca9a00a757fa2409d584810d427d255231452",
+    "src/models/cost_mip.py": "0b03f8339db50bea9b4ded2d8e964cc486efaba1e4f60319e8a5bd3965198a63",
+    "src/models/rmp.py": "c84de3ab51681d2eb1c5f53c6a20e77b462f9d5169e2ca1a63b6c3991604ebb3",
+    "src/parser.py": "20148498e2b97912ed757bdc48b8b132f87f6c13bf11107282782b113ecdd90b",
+    "src/pool_generator.py": "a6d1da528658e56311745a28ba7b95edab5e486335a7816021dd475310f9bd27",
+    "src/reporting.py": "7362db0f8b9c908c312f28cf1ce7fa4eead87c3563d9a882bdd6022e4bc55742",
+    "src/utils.py": "3e9e6ff0c0d5b2276c836cc39ef03d39e187fb1f9c3a618e8264a4763307f7d0",
+    "src/validator.py": "ede41735e9d4a87afc5b6df32ed86e752f105a0428098d37979dc03ace48b504",
+    "src/visualization/map_plot.py": "c011dd1090ae19ad3087a2bb50a9279e6f4e239ed70cf4d166f554d1b3368197"
+  },
+  "arguments": {
+    "data_root": "/workspace/scratch/d7b97b7fda18/project_public/data",
+    "datasets": [
+      "toy"
+    ],
+    "budgets": null,
+    "factors": [
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "solver": "gurobi",
+    "time_limit": 60,
+    "pool_source": "existing",
+    "max_edges": 6,
+    "min_edges": 2,
+    "k_paths": 2,
+    "reference_cost": 703.8,
+    "allow_legacy_frequency_bounds": false,
+    "output": "/workspace/scratch/d7b97b7fda18/project_public/results/role4",
+    "plot": true
+  },
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+}

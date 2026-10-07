@@ -1,0 +1,7 @@
+{
+  "dataset": "sioux_falls",
+  "status": "wall_time_limit",
+  "legacy_diagnostic": true,
+  "wall_limit_seconds": 20.0,
+  "interpretation": "Run stopped externally; no optimality claim or solution recorded."
+}

@@ -1,0 +1,3416 @@
+{
+  "metric": "uncapacitated_direct_demand_coverage",
+  "constraint_policy": "uploaded_utils.effective_frequency_bounds",
+  "lp": {
+    "status": "optimal",
+    "frequencies": {
+      "41": 3.0,
+      "49": 6.571428571428571,
+      "68": 3.0,
+      "74": 3.4285714285714284,
+      "79": 1.5714285714285714,
+      "98": 3.4285714285714284,
+      "108": 3.0,
+      "114": 2.2857142857142856,
+      "129": 0.5714285714285716,
+      "149": 0.7142857142857144,
+      "150": 2.0,
+      "151": 2.2857142857142856,
+      "152": 2.0,
+      "153": 3.5714285714285716
+    },
+    "cost_lower_bound": 1905.7911428571429,
+    "runtime_seconds": 0.018125001000043994,
+    "solver": "gurobi"
+  },
+  "records": [
+    {
+      "dataset": "mandl",
+      "method": "greedy",
+      "budget": 1933.3175,
+      "raw": {
+        "method": "greedy",
+        "status": "construction_failed",
+        "frequencies": {
+          "27": 1,
+          "41": 3,
+          "49": 3,
+          "72": 7,
+          "73": 2,
+          "79": 3,
+          "96": 1,
+          "108": 3,
+          "114": 4,
+          "117": 1,
+          "118": 6,
+          "129": 1,
+          "147": 2,
+          "150": 1
+        },
+        "cost": 1932.2045,
+        "direct_demand_coverage": 14670.0,
+        "coverage_percentage": 94.21965317919076,
+        "frequency_feasible": false,
+        "budget_feasible": true,
+        "runtime_seconds": 0.018207365000307618,
+        "message": "No admissible increment repairs a deficit; this is not an infeasibility proof.",
+        "details": {}
+      },
+      "best_feasible": null,
+      "selected_from_budget": null,
+      "carried_forward": false
+    },
+    {
+      "dataset": "mandl",
+      "method": "greedy",
+      "budget": 2416.6468750000004,
+      "raw": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "3": 7,
+          "27": 1,
+          "41": 3,
+          "49": 3,
+          "72": 7,
+          "73": 2,
+          "79": 3,
+          "96": 1,
+          "108": 3,
+          "114": 4,
+          "117": 1,
+          "118": 8,
+          "129": 1,
+          "147": 2,
+          "150": 1
+        },
+        "cost": 2387.4705,
+        "direct_demand_coverage": 14670.0,
+        "coverage_percentage": 94.21965317919076,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.010361628999817185,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "best_feasible": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "3": 7,
+          "27": 1,
+          "41": 3,
+          "49": 3,
+          "72": 7,
+          "73": 2,
+          "79": 3,
+          "96": 1,
+          "108": 3,
+          "114": 4,
+          "117": 1,
+          "118": 8,
+          "129": 1,
+          "147": 2,
+          "150": 1
+        },
+        "cost": 2387.4705,
+        "direct_demand_coverage": 14670.0,
+        "coverage_percentage": 94.21965317919076,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.010361628999817185,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "selected_from_budget": 2416.6468750000004,
+      "carried_forward": false
+    },
+    {
+      "dataset": "mandl",
+      "method": "greedy",
+      "budget": 2899.97625,
+      "raw": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "3": 7,
+          "27": 1,
+          "41": 3,
+          "43": 1,
+          "49": 3,
+          "52": 1,
+          "72": 7,
+          "73": 2,
+          "79": 3,
+          "86": 1,
+          "96": 1,
+          "99": 1,
+          "108": 3,
+          "114": 4,
+          "117": 1,
+          "118": 8,
+          "129": 1,
+          "134": 1,
+          "141": 1,
+          "145": 1,
+          "147": 2,
+          "150": 1,
+          "153": 1
+        },
+        "cost": 2794.733,
+        "direct_demand_coverage": 15570.0,
+        "coverage_percentage": 100.0,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.013252927000394266,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "best_feasible": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "3": 7,
+          "27": 1,
+          "41": 3,
+          "43": 1,
+          "49": 3,
+          "52": 1,
+          "72": 7,
+          "73": 2,
+          "79": 3,
+          "86": 1,
+          "96": 1,
+          "99": 1,
+          "108": 3,
+          "114": 4,
+          "117": 1,
+          "118": 8,
+          "129": 1,
+          "134": 1,
+          "141": 1,
+          "145": 1,
+          "147": 2,
+          "150": 1,
+          "153": 1
+        },
+        "cost": 2794.733,
+        "direct_demand_coverage": 15570.0,
+        "coverage_percentage": 100.0,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.013252927000394266,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "selected_from_budget": 2899.97625,
+      "carried_forward": false
+    },
+    {
+      "dataset": "mandl",
+      "method": "greedy",
+      "budget": 3866.635,
+      "raw": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "3": 7,
+          "27": 1,
+          "41": 3,
+          "43": 1,
+          "49": 3,
+          "52": 1,
+          "72": 7,
+          "73": 2,
+          "79": 3,
+          "86": 1,
+          "96": 1,
+          "99": 1,
+          "108": 3,
+          "114": 4,
+          "117": 1,
+          "118": 8,
+          "129": 1,
+          "134": 1,
+          "141": 1,
+          "145": 1,
+          "147": 2,
+          "150": 1,
+          "153": 1
+        },
+        "cost": 2794.733,
+        "direct_demand_coverage": 15570.0,
+        "coverage_percentage": 100.0,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.020033628000419412,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "best_feasible": {
+        "method": "greedy",
+        "status": "feasible",
+        "frequencies": {
+          "3": 7,
+          "27": 1,
+          "41": 3,
+          "43": 1,
+          "49": 3,
+          "52": 1,
+          "72": 7,
+          "73": 2,
+          "79": 3,
+          "86": 1,
+          "96": 1,
+          "99": 1,
+          "108": 3,
+          "114": 4,
+          "117": 1,
+          "118": 8,
+          "129": 1,
+          "134": 1,
+          "141": 1,
+          "145": 1,
+          "147": 2,
+          "150": 1,
+          "153": 1
+        },
+        "cost": 2794.733,
+        "direct_demand_coverage": 15570.0,
+        "coverage_percentage": 100.0,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.013252927000394266,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {}
+      },
+      "selected_from_budget": 2899.97625,
+      "carried_forward": true
+    },
+    {
+      "dataset": "mandl",
+      "method": "lp_rounding",
+      "budget": 1933.3175,
+      "raw": {
+        "method": "lp_rounding",
+        "status": "construction_failed",
+        "frequencies": {
+          "27": 1,
+          "41": 3,
+          "49": 3,
+          "72": 7,
+          "73": 2,
+          "79": 3,
+          "96": 1,
+          "108": 3,
+          "114": 4,
+          "117": 1,
+          "118": 6,
+          "129": 1,
+          "147": 2,
+          "150": 1
+        },
+        "cost": 1932.2045,
+        "direct_demand_coverage": 14670.0,
+        "coverage_percentage": 94.21965317919076,
+        "frequency_feasible": false,
+        "budget_feasible": true,
+        "runtime_seconds": 0.02616359800049395,
+        "message": "No admissible increment repairs a deficit; this is not an infeasibility proof.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 1905.7911428571429,
+          "lp_runtime_seconds": 0.018125001000043994,
+          "lp_reused": true,
+          "fallback_used": true,
+          "rounding_attempt_status": "construction_failed"
+        }
+      },
+      "best_feasible": null,
+      "selected_from_budget": null,
+      "carried_forward": false
+    },
+    {
+      "dataset": "mandl",
+      "method": "lp_rounding",
+      "budget": 2416.6468750000004,
+      "raw": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "41": 3,
+          "43": 1,
+          "49": 6,
+          "53": 1,
+          "68": 3,
+          "72": 1,
+          "74": 3,
+          "79": 2,
+          "82": 1,
+          "86": 1,
+          "88": 1,
+          "95": 1,
+          "98": 3,
+          "99": 1,
+          "108": 3,
+          "113": 1,
+          "114": 2,
+          "134": 1,
+          "141": 1,
+          "148": 1,
+          "149": 1,
+          "150": 2,
+          "151": 2,
+          "152": 2,
+          "153": 3
+        },
+        "cost": 2392.361,
+        "direct_demand_coverage": 15540.0,
+        "coverage_percentage": 99.8073217726397,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.008006559000023117,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 1905.7911428571429,
+          "lp_runtime_seconds": 0.018125001000043994,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "best_feasible": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "41": 3,
+          "43": 1,
+          "49": 6,
+          "53": 1,
+          "68": 3,
+          "72": 1,
+          "74": 3,
+          "79": 2,
+          "82": 1,
+          "86": 1,
+          "88": 1,
+          "95": 1,
+          "98": 3,
+          "99": 1,
+          "108": 3,
+          "113": 1,
+          "114": 2,
+          "134": 1,
+          "141": 1,
+          "148": 1,
+          "149": 1,
+          "150": 2,
+          "151": 2,
+          "152": 2,
+          "153": 3
+        },
+        "cost": 2392.361,
+        "direct_demand_coverage": 15540.0,
+        "coverage_percentage": 99.8073217726397,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.008006559000023117,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 1905.7911428571429,
+          "lp_runtime_seconds": 0.018125001000043994,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "selected_from_budget": 2416.6468750000004,
+      "carried_forward": false
+    },
+    {
+      "dataset": "mandl",
+      "method": "lp_rounding",
+      "budget": 2899.97625,
+      "raw": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "41": 3,
+          "43": 1,
+          "49": 6,
+          "53": 1,
+          "68": 3,
+          "72": 1,
+          "74": 3,
+          "79": 2,
+          "82": 1,
+          "86": 1,
+          "88": 1,
+          "95": 1,
+          "98": 3,
+          "99": 1,
+          "108": 3,
+          "113": 1,
+          "114": 2,
+          "129": 1,
+          "134": 1,
+          "141": 1,
+          "145": 1,
+          "148": 1,
+          "149": 1,
+          "150": 2,
+          "151": 2,
+          "152": 2,
+          "153": 3
+        },
+        "cost": 2494.1365,
+        "direct_demand_coverage": 15570.0,
+        "coverage_percentage": 100.0,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.006124982000073942,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 1905.7911428571429,
+          "lp_runtime_seconds": 0.018125001000043994,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "best_feasible": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "41": 3,
+          "43": 1,
+          "49": 6,
+          "53": 1,
+          "68": 3,
+          "72": 1,
+          "74": 3,
+          "79": 2,
+          "82": 1,
+          "86": 1,
+          "88": 1,
+          "95": 1,
+          "98": 3,
+          "99": 1,
+          "108": 3,
+          "113": 1,
+          "114": 2,
+          "129": 1,
+          "134": 1,
+          "141": 1,
+          "145": 1,
+          "148": 1,
+          "149": 1,
+          "150": 2,
+          "151": 2,
+          "152": 2,
+          "153": 3
+        },
+        "cost": 2494.1365,
+        "direct_demand_coverage": 15570.0,
+        "coverage_percentage": 100.0,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.006124982000073942,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 1905.7911428571429,
+          "lp_runtime_seconds": 0.018125001000043994,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "selected_from_budget": 2899.97625,
+      "carried_forward": false
+    },
+    {
+      "dataset": "mandl",
+      "method": "lp_rounding",
+      "budget": 3866.635,
+      "raw": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "41": 3,
+          "43": 1,
+          "49": 6,
+          "53": 1,
+          "68": 3,
+          "72": 1,
+          "74": 3,
+          "79": 2,
+          "82": 1,
+          "86": 1,
+          "88": 1,
+          "95": 1,
+          "98": 3,
+          "99": 1,
+          "108": 3,
+          "113": 1,
+          "114": 2,
+          "129": 1,
+          "134": 1,
+          "141": 1,
+          "145": 1,
+          "148": 1,
+          "149": 1,
+          "150": 2,
+          "151": 2,
+          "152": 2,
+          "153": 3
+        },
+        "cost": 2494.1365,
+        "direct_demand_coverage": 15570.0,
+        "coverage_percentage": 100.0,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.005940785000348114,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 1905.7911428571429,
+          "lp_runtime_seconds": 0.018125001000043994,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "best_feasible": {
+        "method": "lp_rounding",
+        "status": "feasible",
+        "frequencies": {
+          "41": 3,
+          "43": 1,
+          "49": 6,
+          "53": 1,
+          "68": 3,
+          "72": 1,
+          "74": 3,
+          "79": 2,
+          "82": 1,
+          "86": 1,
+          "88": 1,
+          "95": 1,
+          "98": 3,
+          "99": 1,
+          "108": 3,
+          "113": 1,
+          "114": 2,
+          "129": 1,
+          "134": 1,
+          "141": 1,
+          "145": 1,
+          "148": 1,
+          "149": 1,
+          "150": 2,
+          "151": 2,
+          "152": 2,
+          "153": 3
+        },
+        "cost": 2494.1365,
+        "direct_demand_coverage": 15570.0,
+        "coverage_percentage": 100.0,
+        "frequency_feasible": true,
+        "budget_feasible": true,
+        "runtime_seconds": 0.006124982000073942,
+        "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
+        "details": {
+          "lp_status": "optimal",
+          "lp_cost_lower_bound": 1905.7911428571429,
+          "lp_runtime_seconds": 0.018125001000043994,
+          "lp_reused": true,
+          "fallback_used": false
+        }
+      },
+      "selected_from_budget": 2899.97625,
+      "carried_forward": true
+    }
+  ],
+  "dataset": "mandl",
+  "pool": [
+    {
+      "id": 1,
+      "edges": [
+        9,
+        13
+      ],
+      "length": 6.68,
+      "cost": 50.434000000000005,
+      "nodes": [
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 2,
+      "edges": [
+        10,
+        12,
+        11
+      ],
+      "length": 8.16,
+      "cost": 50.558,
+      "nodes": [
+        6,
+        15,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 3,
+      "edges": [
+        17,
+        20
+      ],
+      "length": 10.0,
+      "cost": 50.6,
+      "nodes": [
+        10,
+        13,
+        11
+      ]
+    },
+    {
+      "id": 4,
+      "edges": [
+        16,
+        20
+      ],
+      "length": 6.66,
+      "cost": 50.433,
+      "nodes": [
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 5,
+      "edges": [
+        12,
+        14,
+        13
+      ],
+      "length": 8.14,
+      "cost": 50.556999999999995,
+      "nodes": [
+        7,
+        15,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 6,
+      "edges": [
+        14,
+        12,
+        11
+      ],
+      "length": 7.48,
+      "cost": 50.524,
+      "nodes": [
+        8,
+        15,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 7,
+      "edges": [
+        16,
+        19
+      ],
+      "length": 10.0,
+      "cost": 50.6,
+      "nodes": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": 8,
+      "edges": [
+        13,
+        9,
+        7,
+        8
+      ],
+      "length": 16.02,
+      "cost": 51.001000000000005,
+      "nodes": [
+        10,
+        8,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 9,
+      "edges": [
+        7,
+        9,
+        13
+      ],
+      "length": 9.35,
+      "cost": 50.6175,
+      "nodes": [
+        4,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 10,
+      "edges": [
+        7,
+        10,
+        12,
+        11
+      ],
+      "length": 10.83,
+      "cost": 50.7415,
+      "nodes": [
+        4,
+        6,
+        15,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 11,
+      "edges": [
+        1,
+        2
+      ],
+      "length": 6.85,
+      "cost": 50.4425,
+      "nodes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 12,
+      "edges": [
+        1,
+        3,
+        7,
+        5
+      ],
+      "length": 12.0,
+      "cost": 50.800000000000004,
+      "nodes": [
+        1,
+        2,
+        4,
+        6,
+        3
+      ]
+    },
+    {
+      "id": 13,
+      "edges": [
+        16,
+        20,
+        21
+      ],
+      "length": 8.29,
+      "cost": 50.564499999999995,
+      "nodes": [
+        10,
+        11,
+        13,
+        14
+      ]
+    },
+    {
+      "id": 14,
+      "edges": [
+        2,
+        5
+      ],
+      "length": 3.52,
+      "cost": 50.276,
+      "nodes": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "id": 15,
+      "edges": [
+        3,
+        7
+      ],
+      "length": 4.67,
+      "cost": 50.3335,
+      "nodes": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "id": 16,
+      "edges": [
+        2,
+        3,
+        7
+      ],
+      "length": 6.1899999999999995,
+      "cost": 50.4595,
+      "nodes": [
+        3,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "id": 17,
+      "edges": [
+        1,
+        2,
+        5,
+        9,
+        13
+      ],
+      "length": 15.53,
+      "cost": 51.0265,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 18,
+      "edges": [
+        1,
+        3,
+        7,
+        9,
+        13
+      ],
+      "length": 16.68,
+      "cost": 51.084,
+      "nodes": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 19,
+      "edges": [
+        1,
+        2,
+        5
+      ],
+      "length": 8.85,
+      "cost": 50.5925,
+      "nodes": [
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "id": 20,
+      "edges": [
+        1,
+        3,
+        7
+      ],
+      "length": 10.0,
+      "cost": 50.65,
+      "nodes": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "id": 21,
+      "edges": [
+        15,
+        12,
+        11
+      ],
+      "length": 11.33,
+      "cost": 50.716499999999996,
+      "nodes": [
+        9,
+        15,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 22,
+      "edges": [
+        15,
+        14,
+        13
+      ],
+      "length": 12.14,
+      "cost": 50.757,
+      "nodes": [
+        9,
+        15,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 23,
+      "edges": [
+        2,
+        5,
+        9,
+        13
+      ],
+      "length": 10.2,
+      "cost": 50.71,
+      "nodes": [
+        2,
+        3,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 24,
+      "edges": [
+        3,
+        7,
+        9,
+        13
+      ],
+      "length": 11.35,
+      "cost": 50.767500000000005,
+      "nodes": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 25,
+      "edges": [
+        2,
+        5,
+        7
+      ],
+      "length": 6.1899999999999995,
+      "cost": 50.4595,
+      "nodes": [
+        2,
+        3,
+        6,
+        4
+      ]
+    },
+    {
+      "id": 26,
+      "edges": [
+        6,
+        7,
+        9,
+        13
+      ],
+      "length": 12.02,
+      "cost": 50.801,
+      "nodes": [
+        5,
+        4,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 27,
+      "edges": [
+        6,
+        7,
+        10,
+        12,
+        11
+      ],
+      "length": 13.5,
+      "cost": 50.925,
+      "nodes": [
+        5,
+        4,
+        6,
+        15,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 28,
+      "edges": [
+        3,
+        2,
+        5
+      ],
+      "length": 5.52,
+      "cost": 50.426,
+      "nodes": [
+        4,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "id": 29,
+      "edges": [
+        10,
+        12
+      ],
+      "length": 3.49,
+      "cost": 50.2745,
+      "nodes": [
+        6,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 30,
+      "edges": [
+        9,
+        14,
+        12
+      ],
+      "length": 4.16,
+      "cost": 50.358,
+      "nodes": [
+        6,
+        8,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 31,
+      "edges": [
+        10,
+        14
+      ],
+      "length": 3.64,
+      "cost": 50.282000000000004,
+      "nodes": [
+        6,
+        15,
+        8
+      ]
+    },
+    {
+      "id": 32,
+      "edges": [
+        16,
+        17
+      ],
+      "length": 10.0,
+      "cost": 50.6,
+      "nodes": [
+        11,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 33,
+      "edges": [
+        2,
+        5,
+        10,
+        12
+      ],
+      "length": 7.01,
+      "cost": 50.5505,
+      "nodes": [
+        2,
+        3,
+        6,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 34,
+      "edges": [
+        2,
+        5,
+        9,
+        14,
+        12
+      ],
+      "length": 7.68,
+      "cost": 50.634,
+      "nodes": [
+        2,
+        3,
+        6,
+        8,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 35,
+      "edges": [
+        2,
+        5,
+        9
+      ],
+      "length": 4.87,
+      "cost": 50.393499999999996,
+      "nodes": [
+        2,
+        3,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 36,
+      "edges": [
+        3,
+        7,
+        9
+      ],
+      "length": 6.02,
+      "cost": 50.451,
+      "nodes": [
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 37,
+      "edges": [
+        5,
+        10,
+        12
+      ],
+      "length": 5.49,
+      "cost": 50.4245,
+      "nodes": [
+        3,
+        6,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 38,
+      "edges": [
+        5,
+        9,
+        14,
+        12
+      ],
+      "length": 6.16,
+      "cost": 50.508,
+      "nodes": [
+        3,
+        6,
+        8,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 39,
+      "edges": [
+        5,
+        9
+      ],
+      "length": 3.35,
+      "cost": 50.2675,
+      "nodes": [
+        3,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 40,
+      "edges": [
+        5,
+        10,
+        14
+      ],
+      "length": 5.640000000000001,
+      "cost": 50.431999999999995,
+      "nodes": [
+        3,
+        6,
+        15,
+        8
+      ]
+    },
+    {
+      "id": 41,
+      "edges": [
+        1,
+        4
+      ],
+      "length": 9.33,
+      "cost": 50.566500000000005,
+      "nodes": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "id": 42,
+      "edges": [
+        1,
+        3,
+        6
+      ],
+      "length": 10.0,
+      "cost": 50.65,
+      "nodes": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 43,
+      "edges": [
+        1,
+        2,
+        5,
+        10,
+        12
+      ],
+      "length": 12.34,
+      "cost": 50.867,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 44,
+      "edges": [
+        1,
+        2,
+        5,
+        9,
+        14,
+        12
+      ],
+      "length": 13.01,
+      "cost": 50.9505,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 45,
+      "edges": [
+        1,
+        2,
+        5,
+        9
+      ],
+      "length": 10.2,
+      "cost": 50.71,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 46,
+      "edges": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "length": 11.35,
+      "cost": 50.767500000000005,
+      "nodes": [
+        1,
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 47,
+      "edges": [
+        16,
+        13,
+        9,
+        7,
+        8
+      ],
+      "length": 19.35,
+      "cost": 51.2175,
+      "nodes": [
+        11,
+        10,
+        8,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 48,
+      "edges": [
+        19,
+        20
+      ],
+      "length": 10.0,
+      "cost": 50.6,
+      "nodes": [
+        12,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 49,
+      "edges": [
+        19,
+        16,
+        17
+      ],
+      "length": 16.67,
+      "cost": 50.9835,
+      "nodes": [
+        12,
+        11,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 50,
+      "edges": [
+        1,
+        3
+      ],
+      "length": 7.33,
+      "cost": 50.4665,
+      "nodes": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 51,
+      "edges": [
+        1,
+        2,
+        5,
+        7
+      ],
+      "length": 11.52,
+      "cost": 50.776,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        4
+      ]
+    },
+    {
+      "id": 52,
+      "edges": [
+        2,
+        4
+      ],
+      "length": 5.52,
+      "cost": 50.376000000000005,
+      "nodes": [
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "id": 53,
+      "edges": [
+        2,
+        3,
+        6
+      ],
+      "length": 6.1899999999999995,
+      "cost": 50.4595,
+      "nodes": [
+        3,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 54,
+      "edges": [
+        9,
+        13,
+        16
+      ],
+      "length": 10.01,
+      "cost": 50.6505,
+      "nodes": [
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 55,
+      "edges": [
+        10,
+        12,
+        11,
+        16
+      ],
+      "length": 11.49,
+      "cost": 50.7745,
+      "nodes": [
+        6,
+        15,
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 56,
+      "edges": [
+        3,
+        7,
+        5
+      ],
+      "length": 6.67,
+      "cost": 50.4835,
+      "nodes": [
+        2,
+        4,
+        6,
+        3
+      ]
+    },
+    {
+      "id": 57,
+      "edges": [
+        3,
+        4
+      ],
+      "length": 6.0,
+      "cost": 50.4,
+      "nodes": [
+        4,
+        2,
+        5
+      ]
+    },
+    {
+      "id": 58,
+      "edges": [
+        7,
+        10,
+        12
+      ],
+      "length": 6.16,
+      "cost": 50.458,
+      "nodes": [
+        4,
+        6,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 59,
+      "edges": [
+        7,
+        9,
+        14,
+        12
+      ],
+      "length": 6.83,
+      "cost": 50.541500000000006,
+      "nodes": [
+        4,
+        6,
+        8,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 60,
+      "edges": [
+        7,
+        9
+      ],
+      "length": 4.02,
+      "cost": 50.301,
+      "nodes": [
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 61,
+      "edges": [
+        7,
+        10,
+        14
+      ],
+      "length": 6.3100000000000005,
+      "cost": 50.4655,
+      "nodes": [
+        4,
+        6,
+        15,
+        8
+      ]
+    },
+    {
+      "id": 62,
+      "edges": [
+        6,
+        7
+      ],
+      "length": 5.34,
+      "cost": 50.367000000000004,
+      "nodes": [
+        5,
+        4,
+        6
+      ]
+    },
+    {
+      "id": 63,
+      "edges": [
+        4,
+        2,
+        5
+      ],
+      "length": 7.52,
+      "cost": 50.525999999999996,
+      "nodes": [
+        5,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "id": 64,
+      "edges": [
+        12,
+        14
+      ],
+      "length": 2.81,
+      "cost": 50.240500000000004,
+      "nodes": [
+        7,
+        15,
+        8
+      ]
+    },
+    {
+      "id": 65,
+      "edges": [
+        12,
+        10,
+        9
+      ],
+      "length": 4.84,
+      "cost": 50.391999999999996,
+      "nodes": [
+        7,
+        15,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 66,
+      "edges": [
+        5,
+        9,
+        13
+      ],
+      "length": 8.68,
+      "cost": 50.583999999999996,
+      "nodes": [
+        3,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": 67,
+      "edges": [
+        5,
+        10,
+        12,
+        11
+      ],
+      "length": 10.16,
+      "cost": 50.708000000000006,
+      "nodes": [
+        3,
+        6,
+        15,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 68,
+      "edges": [
+        20,
+        16,
+        18
+      ],
+      "length": 11.99,
+      "cost": 50.7495,
+      "nodes": [
+        13,
+        11,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 69,
+      "edges": [
+        2,
+        3
+      ],
+      "length": 3.52,
+      "cost": 50.276,
+      "nodes": [
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 70,
+      "edges": [
+        5,
+        7
+      ],
+      "length": 4.67,
+      "cost": 50.3335,
+      "nodes": [
+        3,
+        6,
+        4
+      ]
+    },
+    {
+      "id": 71,
+      "edges": [
+        7,
+        9,
+        13,
+        16
+      ],
+      "length": 12.68,
+      "cost": 50.834,
+      "nodes": [
+        4,
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 72,
+      "edges": [
+        8,
+        19
+      ],
+      "length": 13.34,
+      "cost": 50.767,
+      "nodes": [
+        4,
+        12,
+        11
+      ]
+    },
+    {
+      "id": 73,
+      "edges": [
+        1,
+        2,
+        5,
+        9,
+        13,
+        16,
+        20
+      ],
+      "length": 22.189999999999998,
+      "cost": 51.4595,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 74,
+      "edges": [
+        1,
+        2,
+        5,
+        9,
+        13,
+        17
+      ],
+      "length": 22.2,
+      "cost": 51.41,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 75,
+      "edges": [
+        11,
+        16
+      ],
+      "length": 8.0,
+      "cost": 50.5,
+      "nodes": [
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 76,
+      "edges": [
+        12,
+        14,
+        13,
+        16
+      ],
+      "length": 11.47,
+      "cost": 50.773500000000006,
+      "nodes": [
+        7,
+        15,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 77,
+      "edges": [
+        13,
+        16
+      ],
+      "length": 8.66,
+      "cost": 50.533,
+      "nodes": [
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 78,
+      "edges": [
+        14,
+        12,
+        11,
+        16
+      ],
+      "length": 10.81,
+      "cost": 50.740500000000004,
+      "nodes": [
+        8,
+        15,
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 79,
+      "edges": [
+        1,
+        2,
+        5,
+        10,
+        15
+      ],
+      "length": 16.34,
+      "cost": 51.067,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 80,
+      "edges": [
+        1,
+        2,
+        5,
+        9,
+        14,
+        15
+      ],
+      "length": 17.01,
+      "cost": 51.150499999999994,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 81,
+      "edges": [
+        1,
+        2,
+        5,
+        9,
+        13,
+        16
+      ],
+      "length": 18.86,
+      "cost": 51.242999999999995,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 82,
+      "edges": [
+        1,
+        3,
+        7,
+        9,
+        13,
+        16
+      ],
+      "length": 20.01,
+      "cost": 51.3005,
+      "nodes": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 83,
+      "edges": [
+        10,
+        15
+      ],
+      "length": 7.49,
+      "cost": 50.4745,
+      "nodes": [
+        6,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 84,
+      "edges": [
+        9,
+        14,
+        15
+      ],
+      "length": 8.16,
+      "cost": 50.558,
+      "nodes": [
+        6,
+        8,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 85,
+      "edges": [
+        1,
+        3,
+        8
+      ],
+      "length": 14.0,
+      "cost": 50.85,
+      "nodes": [
+        1,
+        2,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 86,
+      "edges": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "length": 18.19,
+      "cost": 51.1595,
+      "nodes": [
+        1,
+        2,
+        3,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 87,
+      "edges": [
+        7,
+        9,
+        13,
+        16,
+        19
+      ],
+      "length": 19.35,
+      "cost": 51.2175,
+      "nodes": [
+        4,
+        6,
+        8,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": 88,
+      "edges": [
+        6,
+        7,
+        10,
+        12
+      ],
+      "length": 8.83,
+      "cost": 50.6415,
+      "nodes": [
+        5,
+        4,
+        6,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 89,
+      "edges": [
+        6,
+        7,
+        9,
+        14,
+        12
+      ],
+      "length": 9.5,
+      "cost": 50.725,
+      "nodes": [
+        5,
+        4,
+        6,
+        8,
+        15,
+        7
+      ]
+    },
+    {
+      "id": 90,
+      "edges": [
+        6,
+        7,
+        9
+      ],
+      "length": 6.6899999999999995,
+      "cost": 50.4845,
+      "nodes": [
+        5,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 91,
+      "edges": [
+        4,
+        2,
+        5,
+        9
+      ],
+      "length": 8.870000000000001,
+      "cost": 50.6435,
+      "nodes": [
+        5,
+        2,
+        3,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 92,
+      "edges": [
+        3,
+        6
+      ],
+      "length": 4.67,
+      "cost": 50.3335,
+      "nodes": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 93,
+      "edges": [
+        2,
+        5,
+        9,
+        13,
+        16
+      ],
+      "length": 13.53,
+      "cost": 50.9265,
+      "nodes": [
+        2,
+        3,
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 94,
+      "edges": [
+        3,
+        7,
+        9,
+        13,
+        16
+      ],
+      "length": 14.68,
+      "cost": 50.984,
+      "nodes": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 95,
+      "edges": [
+        5,
+        9,
+        13,
+        16
+      ],
+      "length": 12.01,
+      "cost": 50.8005,
+      "nodes": [
+        3,
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 96,
+      "edges": [
+        5,
+        10,
+        12,
+        11,
+        16
+      ],
+      "length": 13.49,
+      "cost": 50.9245,
+      "nodes": [
+        3,
+        6,
+        15,
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 97,
+      "edges": [
+        6,
+        7,
+        9,
+        13,
+        16
+      ],
+      "length": 15.35,
+      "cost": 51.0175,
+      "nodes": [
+        5,
+        4,
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 98,
+      "edges": [
+        6,
+        8,
+        19
+      ],
+      "length": 16.009999999999998,
+      "cost": 50.9505,
+      "nodes": [
+        5,
+        4,
+        12,
+        11
+      ]
+    },
+    {
+      "id": 99,
+      "edges": [
+        15,
+        12,
+        11,
+        16
+      ],
+      "length": 14.66,
+      "cost": 50.933,
+      "nodes": [
+        9,
+        15,
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 100,
+      "edges": [
+        15,
+        14,
+        13,
+        16
+      ],
+      "length": 15.47,
+      "cost": 50.9735,
+      "nodes": [
+        9,
+        15,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 101,
+      "edges": [
+        2,
+        5,
+        10,
+        15
+      ],
+      "length": 11.01,
+      "cost": 50.7505,
+      "nodes": [
+        2,
+        3,
+        6,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 102,
+      "edges": [
+        2,
+        5,
+        9,
+        14,
+        15
+      ],
+      "length": 11.68,
+      "cost": 50.834,
+      "nodes": [
+        2,
+        3,
+        6,
+        8,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 103,
+      "edges": [
+        5,
+        10,
+        15
+      ],
+      "length": 9.49,
+      "cost": 50.6245,
+      "nodes": [
+        3,
+        6,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 104,
+      "edges": [
+        5,
+        9,
+        14,
+        15
+      ],
+      "length": 10.16,
+      "cost": 50.708000000000006,
+      "nodes": [
+        3,
+        6,
+        8,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 105,
+      "edges": [
+        7,
+        10,
+        15
+      ],
+      "length": 10.16,
+      "cost": 50.658,
+      "nodes": [
+        4,
+        6,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 106,
+      "edges": [
+        7,
+        9,
+        14,
+        15
+      ],
+      "length": 10.83,
+      "cost": 50.7415,
+      "nodes": [
+        4,
+        6,
+        8,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 107,
+      "edges": [
+        6,
+        8
+      ],
+      "length": 9.34,
+      "cost": 50.567,
+      "nodes": [
+        5,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 108,
+      "edges": [
+        4,
+        3,
+        8
+      ],
+      "length": 12.67,
+      "cost": 50.7835,
+      "nodes": [
+        5,
+        2,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 109,
+      "edges": [
+        7,
+        8
+      ],
+      "length": 9.34,
+      "cost": 50.567,
+      "nodes": [
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 110,
+      "edges": [
+        5,
+        2,
+        3,
+        8
+      ],
+      "length": 12.19,
+      "cost": 50.8095,
+      "nodes": [
+        6,
+        3,
+        2,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 111,
+      "edges": [
+        9,
+        13,
+        16,
+        20
+      ],
+      "length": 13.34,
+      "cost": 50.867000000000004,
+      "nodes": [
+        6,
+        8,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 112,
+      "edges": [
+        9,
+        13,
+        17
+      ],
+      "length": 13.35,
+      "cost": 50.817499999999995,
+      "nodes": [
+        6,
+        8,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 113,
+      "edges": [
+        12,
+        15
+      ],
+      "length": 6.66,
+      "cost": 50.433,
+      "nodes": [
+        7,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 114,
+      "edges": [
+        11,
+        13,
+        14,
+        15
+      ],
+      "length": 16.81,
+      "cost": 51.0405,
+      "nodes": [
+        7,
+        10,
+        8,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 115,
+      "edges": [
+        14,
+        15
+      ],
+      "length": 6.8100000000000005,
+      "cost": 50.4405,
+      "nodes": [
+        8,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 116,
+      "edges": [
+        9,
+        10,
+        15
+      ],
+      "length": 8.84,
+      "cost": 50.592,
+      "nodes": [
+        8,
+        6,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 117,
+      "edges": [
+        20,
+        21
+      ],
+      "length": 4.96,
+      "cost": 50.348,
+      "nodes": [
+        11,
+        13,
+        14
+      ]
+    },
+    {
+      "id": 118,
+      "edges": [
+        16,
+        18
+      ],
+      "length": 8.66,
+      "cost": 50.533,
+      "nodes": [
+        11,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 119,
+      "edges": [
+        3,
+        8
+      ],
+      "length": 8.67,
+      "cost": 50.533500000000004,
+      "nodes": [
+        2,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 120,
+      "edges": [
+        2,
+        5,
+        7,
+        8
+      ],
+      "length": 12.86,
+      "cost": 50.843,
+      "nodes": [
+        2,
+        3,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 121,
+      "edges": [
+        2,
+        5,
+        9,
+        13,
+        16,
+        20
+      ],
+      "length": 16.86,
+      "cost": 51.143,
+      "nodes": [
+        2,
+        3,
+        6,
+        8,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 122,
+      "edges": [
+        2,
+        5,
+        9,
+        13,
+        17
+      ],
+      "length": 16.87,
+      "cost": 51.0935,
+      "nodes": [
+        2,
+        3,
+        6,
+        8,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 123,
+      "edges": [
+        2,
+        3,
+        8
+      ],
+      "length": 10.19,
+      "cost": 50.6595,
+      "nodes": [
+        3,
+        2,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 124,
+      "edges": [
+        5,
+        7,
+        8
+      ],
+      "length": 11.34,
+      "cost": 50.717,
+      "nodes": [
+        3,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 125,
+      "edges": [
+        5,
+        9,
+        13,
+        16,
+        20
+      ],
+      "length": 15.34,
+      "cost": 51.017,
+      "nodes": [
+        3,
+        6,
+        8,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 126,
+      "edges": [
+        5,
+        9,
+        13,
+        17
+      ],
+      "length": 15.35,
+      "cost": 50.9675,
+      "nodes": [
+        3,
+        6,
+        8,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 127,
+      "edges": [
+        7,
+        9,
+        13,
+        16,
+        20
+      ],
+      "length": 16.009999999999998,
+      "cost": 51.0505,
+      "nodes": [
+        4,
+        6,
+        8,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 128,
+      "edges": [
+        7,
+        9,
+        13,
+        17
+      ],
+      "length": 16.02,
+      "cost": 51.001000000000005,
+      "nodes": [
+        4,
+        6,
+        8,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 129,
+      "edges": [
+        6,
+        7,
+        10,
+        15
+      ],
+      "length": 12.83,
+      "cost": 50.8415,
+      "nodes": [
+        5,
+        4,
+        6,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 130,
+      "edges": [
+        6,
+        7,
+        9,
+        14,
+        15
+      ],
+      "length": 13.5,
+      "cost": 50.925,
+      "nodes": [
+        5,
+        4,
+        6,
+        8,
+        15,
+        9
+      ]
+    },
+    {
+      "id": 131,
+      "edges": [
+        9,
+        13,
+        18
+      ],
+      "length": 12.01,
+      "cost": 50.750499999999995,
+      "nodes": [
+        6,
+        8,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 132,
+      "edges": [
+        10,
+        12,
+        11,
+        18
+      ],
+      "length": 13.49,
+      "cost": 50.874500000000005,
+      "nodes": [
+        6,
+        15,
+        7,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 133,
+      "edges": [
+        12,
+        10,
+        7,
+        8
+      ],
+      "length": 12.83,
+      "cost": 50.8415,
+      "nodes": [
+        7,
+        15,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 134,
+      "edges": [
+        12,
+        14,
+        9,
+        7,
+        8
+      ],
+      "length": 13.5,
+      "cost": 50.925,
+      "nodes": [
+        7,
+        15,
+        8,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 135,
+      "edges": [
+        11,
+        16,
+        20
+      ],
+      "length": 11.33,
+      "cost": 50.716499999999996,
+      "nodes": [
+        7,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 136,
+      "edges": [
+        11,
+        17
+      ],
+      "length": 11.34,
+      "cost": 50.667,
+      "nodes": [
+        7,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 137,
+      "edges": [
+        9,
+        7,
+        8
+      ],
+      "length": 10.69,
+      "cost": 50.6845,
+      "nodes": [
+        8,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 138,
+      "edges": [
+        14,
+        10,
+        7,
+        8
+      ],
+      "length": 12.98,
+      "cost": 50.849000000000004,
+      "nodes": [
+        8,
+        15,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 139,
+      "edges": [
+        13,
+        16,
+        20
+      ],
+      "length": 11.99,
+      "cost": 50.7495,
+      "nodes": [
+        8,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 140,
+      "edges": [
+        13,
+        17
+      ],
+      "length": 12.0,
+      "cost": 50.7,
+      "nodes": [
+        8,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 141,
+      "edges": [
+        2,
+        5,
+        9,
+        13,
+        18
+      ],
+      "length": 15.53,
+      "cost": 51.0265,
+      "nodes": [
+        2,
+        3,
+        6,
+        8,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 142,
+      "edges": [
+        3,
+        7,
+        9,
+        13,
+        18
+      ],
+      "length": 16.68,
+      "cost": 51.084,
+      "nodes": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 143,
+      "edges": [
+        5,
+        9,
+        13,
+        18
+      ],
+      "length": 14.01,
+      "cost": 50.9005,
+      "nodes": [
+        3,
+        6,
+        8,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 144,
+      "edges": [
+        5,
+        10,
+        12,
+        11,
+        18
+      ],
+      "length": 15.49,
+      "cost": 51.0245,
+      "nodes": [
+        3,
+        6,
+        15,
+        7,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 145,
+      "edges": [
+        7,
+        9,
+        13,
+        18
+      ],
+      "length": 14.68,
+      "cost": 50.934000000000005,
+      "nodes": [
+        4,
+        6,
+        8,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 146,
+      "edges": [
+        7,
+        10,
+        12,
+        11,
+        18
+      ],
+      "length": 16.16,
+      "cost": 51.058,
+      "nodes": [
+        4,
+        6,
+        15,
+        7,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 147,
+      "edges": [
+        6,
+        7,
+        9,
+        13,
+        16,
+        20
+      ],
+      "length": 18.68,
+      "cost": 51.233999999999995,
+      "nodes": [
+        5,
+        4,
+        6,
+        8,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "id": 148,
+      "edges": [
+        6,
+        7,
+        9,
+        13,
+        17
+      ],
+      "length": 18.69,
+      "cost": 51.1845,
+      "nodes": [
+        5,
+        4,
+        6,
+        8,
+        10,
+        13
+      ]
+    },
+    {
+      "id": 149,
+      "edges": [
+        11,
+        18
+      ],
+      "length": 10.0,
+      "cost": 50.6,
+      "nodes": [
+        7,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 150,
+      "edges": [
+        11,
+        16,
+        20,
+        21
+      ],
+      "length": 12.96,
+      "cost": 50.848000000000006,
+      "nodes": [
+        7,
+        10,
+        11,
+        13,
+        14
+      ]
+    },
+    {
+      "id": 151,
+      "edges": [
+        13,
+        18
+      ],
+      "length": 10.66,
+      "cost": 50.633,
+      "nodes": [
+        8,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 152,
+      "edges": [
+        14,
+        12,
+        11,
+        18
+      ],
+      "length": 12.81,
+      "cost": 50.840500000000006,
+      "nodes": [
+        8,
+        15,
+        7,
+        10,
+        14
+      ]
+    },
+    {
+      "id": 153,
+      "edges": [
+        15,
+        10,
+        7,
+        8
+      ],
+      "length": 16.83,
+      "cost": 51.0415,
+      "nodes": [
+        9,
+        15,
+        6,
+        4,
+        12
+      ]
+    },
+    {
+      "id": 154,
+      "edges": [
+        15,
+        14,
+        9,
+        7,
+        8
+      ],
+      "length": 17.5,
+      "cost": 51.125,
+      "nodes": [
+        9,
+        15,
+        8,
+        6,
+        4,
+        12
+      ]
+    }
+  ],
+  "input_audit": {
+    "frequency_inputs_verified_for_shared_helper": false,
+    "legacy_diagnostic": true,
+    "issues": [
+      "Missing Load.giv rows for edges [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21].",
+      "Legacy pool contains 1 lines longer than requested max-edges."
+    ]
+  },
+  "pool_length_limit_violations": [
+    73
+  ],
+  "pool_generation_seconds": 0.0075581330002023606,
+  "reference": null,
+  "reference_kind": "user_supplied_reference_cost",
+  "vehicle_capacity": 450,
+  "capacity_load_mismatches": [],
+  "cost_parameters": {
+    "fixed_per_frequency": 50.0,
+    "per_length": 0.05,
+    "per_edge": 0.05
+  },
+  "effective_frequency_bounds": {
+    "1": [
+      8,
+      0
+    ],
+    "2": [
+      2,
+      0
+    ],
+    "3": [
+      3,
+      0
+    ],
+    "4": [
+      6,
+      0
+    ],
+    "5": [
+      3,
+      0
+    ],
+    "6": [
+      4,
+      0
+    ],
+    "7": [
+      4,
+      0
+    ],
+    "8": [
+      10,
+      0
+    ],
+    "9": [
+      2,
+      0
+    ],
+    "10": [
+      3,
+      0
+    ],
+    "11": [
+      7,
+      0
+    ],
+    "12": [
+      2,
+      0
+    ],
+    "13": [
+      8,
+      0
+    ],
+    "14": [
+      2,
+      0
+    ],
+    "15": [
+      8,
+      0
+    ],
+    "16": [
+      5,
+      0
+    ],
+    "17": [
+      10,
+      0
+    ],
+    "18": [
+      8,
+      0
+    ],
+    "19": [
+      10,
+      0
+    ],
+    "20": [
+      5,
+      0
+    ],
+    "21": [
+      2,
+      0
+    ]
+  },
+  "input_sha256": {
+    "Global-Config.cnf": "25c8402e6de34f3de57c2030e98747ca6a631df9acca39f1927bf2de354397f0",
+    "mandl/basis/Config.cnf": "8d4294d97dfe654222665eb67e6d0c3c27b69b08150cf1c3ad4d90c548ececd0",
+    "mandl/basis/Edge.giv": "5a507ab712bec116b50b1fa6d648a1eb9bd133d30946b7bdafe28570aa7c2c63",
+    "mandl/basis/OD.giv": "84871efc32bad0cc250b5b71027133f90a2daa0bec838a29b61ebd4e68fe00d0",
+    "mandl/basis/Stop.giv": "04c1db4863432a45437db5628b4f50acaa93b2277c4a6ca83d4c02e46bc508c5"
+  },
+  "source_sha256": {
+    "src/__init__.py": "dd51043ef7933d36c1ff9300f93a1864bfc3e6156b1a7ba195dda505032ba86b",
+    "src/heuristics/__init__.py": "b9b6ca9a2e521679cc3e4dedaa78f4b4eb4ebb2356ccd282c23e839afb4739d0",
+    "src/heuristics/budget_sweep.py": "450bcd71f995322e0d72e5b13fe00382c40dfda04dab8899d050db38a366bfbe",
+    "src/heuristics/greedy_pool.py": "86e86a6747c77d8e549d0f9c01bb293b08e31ba16325bcc55e431706142d2d84",
+    "src/heuristics/input_audit.py": "dddbec6817f496efce14940b1cddd717ce9382ae5f5b361c182e134ecdadc727",
+    "src/heuristics/lp_rounding.py": "86eb3efc81005029c1a4f3eee978e6bcb3981b59ac67badb36e4826212629b25",
+    "src/models/__init__.py": "6b617979403756928c7738bed5546e88624f8717c8bd9da31357bf6f89f7cf3b",
+    "src/models/column_generation.py": "c0c60d844c5a89470e783f398efca9a00a757fa2409d584810d427d255231452",
+    "src/models/cost_mip.py": "0b03f8339db50bea9b4ded2d8e964cc486efaba1e4f60319e8a5bd3965198a63",
+    "src/models/rmp.py": "c84de3ab51681d2eb1c5f53c6a20e77b462f9d5169e2ca1a63b6c3991604ebb3",
+    "src/parser.py": "20148498e2b97912ed757bdc48b8b132f87f6c13bf11107282782b113ecdd90b",
+    "src/pool_generator.py": "a6d1da528658e56311745a28ba7b95edab5e486335a7816021dd475310f9bd27",
+    "src/reporting.py": "7362db0f8b9c908c312f28cf1ce7fa4eead87c3563d9a882bdd6022e4bc55742",
+    "src/utils.py": "3e9e6ff0c0d5b2276c836cc39ef03d39e187fb1f9c3a618e8264a4763307f7d0",
+    "src/validator.py": "ede41735e9d4a87afc5b6df32ed86e752f105a0428098d37979dc03ace48b504",
+    "src/visualization/map_plot.py": "c011dd1090ae19ad3087a2bb50a9279e6f4e239ed70cf4d166f554d1b3368197"
+  },
+  "arguments": {
+    "data_root": "/workspace/scratch/d7b97b7fda18/project_public/data",
+    "datasets": [
+      "mandl"
+    ],
+    "budgets": null,
+    "factors": [
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "solver": "gurobi",
+    "time_limit": 60,
+    "pool_source": "generate",
+    "max_edges": 6,
+    "min_edges": 2,
+    "k_paths": 2,
+    "reference_cost": 1933.3175,
+    "allow_legacy_frequency_bounds": true,
+    "output": "results/role4/legacy_diagnostics",
+    "plot": true
+  },
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+}
