@@ -12,7 +12,7 @@
       "8": 3.0
     },
     "cost_lower_bound": 703.8000000000001,
-    "runtime_seconds": 0.012830761000259372,
+    "runtime_seconds": 3.297186999989208,
     "solver": "gurobi"
   },
   "records": [
@@ -36,7 +36,7 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00043706900032702833,
+        "runtime_seconds": 0.0006484170153271407,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {}
       },
@@ -56,7 +56,7 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00043706900032702833,
+        "runtime_seconds": 0.0006484170153271407,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {}
       },
@@ -83,7 +83,7 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.0004214750006212853,
+        "runtime_seconds": 0.0005140840075910091,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {}
       },
@@ -103,7 +103,7 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00043706900032702833,
+        "runtime_seconds": 0.0006484170153271407,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {}
       },
@@ -130,7 +130,7 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00032760399972175946,
+        "runtime_seconds": 0.00045487500028684735,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {}
       },
@@ -150,7 +150,7 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00043706900032702833,
+        "runtime_seconds": 0.0006484170153271407,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {}
       },
@@ -177,7 +177,7 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.0004157569992457866,
+        "runtime_seconds": 0.00043737501255236566,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {}
       },
@@ -197,7 +197,7 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00043706900032702833,
+        "runtime_seconds": 0.0006484170153271407,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {}
       },
@@ -224,12 +224,12 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00017000600018945988,
+        "runtime_seconds": 0.0002447500010021031,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {
           "lp_status": "optimal",
           "lp_cost_lower_bound": 703.8000000000001,
-          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_runtime_seconds": 3.297186999989208,
           "lp_reused": true,
           "fallback_used": false
         }
@@ -250,12 +250,12 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00017000600018945988,
+        "runtime_seconds": 0.0002447500010021031,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {
           "lp_status": "optimal",
           "lp_cost_lower_bound": 703.8000000000001,
-          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_runtime_seconds": 3.297186999989208,
           "lp_reused": true,
           "fallback_used": false
         }
@@ -283,12 +283,12 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.0002304479994563735,
+        "runtime_seconds": 0.00022754102246835828,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {
           "lp_status": "optimal",
           "lp_cost_lower_bound": 703.8000000000001,
-          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_runtime_seconds": 3.297186999989208,
           "lp_reused": true,
           "fallback_used": false
         }
@@ -309,12 +309,12 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00017000600018945988,
+        "runtime_seconds": 0.0002447500010021031,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {
           "lp_status": "optimal",
           "lp_cost_lower_bound": 703.8000000000001,
-          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_runtime_seconds": 3.297186999989208,
           "lp_reused": true,
           "fallback_used": false
         }
@@ -342,12 +342,12 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.0003319709994684672,
+        "runtime_seconds": 0.00022420802270062268,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {
           "lp_status": "optimal",
           "lp_cost_lower_bound": 703.8000000000001,
-          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_runtime_seconds": 3.297186999989208,
           "lp_reused": true,
           "fallback_used": false
         }
@@ -368,12 +368,12 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00017000600018945988,
+        "runtime_seconds": 0.0002447500010021031,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {
           "lp_status": "optimal",
           "lp_cost_lower_bound": 703.8000000000001,
-          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_runtime_seconds": 3.297186999989208,
           "lp_reused": true,
           "fallback_used": false
         }
@@ -401,12 +401,12 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.000300071999845386,
+        "runtime_seconds": 0.00024591601686552167,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {
           "lp_status": "optimal",
           "lp_cost_lower_bound": 703.8000000000001,
-          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_runtime_seconds": 3.297186999989208,
           "lp_reused": true,
           "fallback_used": false
         }
@@ -427,12 +427,12 @@
         "coverage_percentage": 86.95652173913044,
         "frequency_feasible": true,
         "budget_feasible": true,
-        "runtime_seconds": 0.00017000600018945988,
+        "runtime_seconds": 0.0002447500010021031,
         "message": "Feasible under the shared edge-frequency model; service is a coverage proxy.",
         "details": {
           "lp_status": "optimal",
           "lp_cost_lower_bound": 703.8000000000001,
-          "lp_runtime_seconds": 0.012830761000259372,
+          "lp_runtime_seconds": 3.297186999989208,
           "lp_reused": true,
           "fallback_used": false
         }
@@ -573,7 +573,8 @@
     "legacy_diagnostic": false,
     "issues": []
   },
-  "pool_generation_seconds": 0.00013812799988954794,
+  "pool_length_limit_violations": [],
+  "pool_generation_seconds": 4.312500823289156e-05,
   "reference": null,
   "reference_kind": "user_supplied_reference_cost",
   "vehicle_capacity": 70,
@@ -629,7 +630,7 @@
   },
   "source_sha256": {
     "src/__init__.py": "dd51043ef7933d36c1ff9300f93a1864bfc3e6156b1a7ba195dda505032ba86b",
-    "src/heuristics/__init__.py": "b9b6ca9a2e521679cc3e4dedaa78f4b4eb4ebb2356ccd282c23e839afb4739d0",
+    "src/heuristics/__init__.py": "58093a68c95fdba769c9c3ce12e3ff766d536dafd97d17ca5e1e2a9660a1c2de",
     "src/heuristics/budget_sweep.py": "450bcd71f995322e0d72e5b13fe00382c40dfda04dab8899d050db38a366bfbe",
     "src/heuristics/greedy_pool.py": "86e86a6747c77d8e549d0f9c01bb293b08e31ba16325bcc55e431706142d2d84",
     "src/heuristics/input_audit.py": "dddbec6817f496efce14940b1cddd717ce9382ae5f5b361c182e134ecdadc727",
@@ -646,7 +647,7 @@
     "src/visualization/map_plot.py": "c011dd1090ae19ad3087a2bb50a9279e6f4e239ed70cf4d166f554d1b3368197"
   },
   "arguments": {
-    "data_root": "/workspace/scratch/d7b97b7fda18/project_public/data",
+    "data_root": "/Users/khishmac/Downloads/2ams50-project-public/data",
     "datasets": [
       "toy"
     ],
@@ -660,13 +661,13 @@
     "solver": "gurobi",
     "time_limit": 60,
     "pool_source": "existing",
-    "max_edges": 6,
+    "max_edges": 12,
     "min_edges": 2,
-    "k_paths": 2,
+    "k_paths": 3,
     "reference_cost": 703.8,
     "allow_legacy_frequency_bounds": false,
-    "output": "/workspace/scratch/d7b97b7fda18/project_public/results/role4",
+    "output": "/Users/khishmac/Downloads/2ams50-project-public/results/heuristics",
     "plot": true
   },
-  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  "python_version": "3.14.8 (v3.14.8:8e6e75d9102, Sep 30 2026, 14:34:30) [Clang 21.0.0 (clang-2100.1.1.101)]"
 }
